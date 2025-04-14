@@ -1,5 +1,7 @@
 package cse213.fooddeliveryproject.User;
 
+import cse213.fooddeliveryproject.NonUser.Order;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -74,7 +76,7 @@ public class Customer extends User{
     public boolean updateProfile(String name,String email,String phoneNumber,String address,String newPassword){
         return true;
     }
-    public boolean addToCart(Item selectItem,Float quantity,Resturant selectResturant){
+    public boolean addToCart(Item selectItem,Float quantity,Restaurant selectRestaurant){
         return true;
     }
     public boolean placeOrder(String deliveryAddress,String paymentMethod){
@@ -86,7 +88,7 @@ public class Customer extends User{
     public void  trackOrderStatus(){
 
     }
-    public  ArrayList<Order> viewOrderHistory(LocalDate dateFrom,LocalDate dateTo,Order orderStatus){
+    public  ArrayList<Order> viewOrderHistory(LocalDate dateFrom, LocalDate dateTo, Order orderStatus){
         return new ArrayList<>();
 
     }
