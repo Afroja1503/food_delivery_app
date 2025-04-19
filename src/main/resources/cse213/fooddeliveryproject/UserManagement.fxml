@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.UserManagementController"
+            xmlns="http://javafx.com/javafx">
+    <children>
+        <Label layoutX="30" layoutY="20" text="User Management Panel" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+        <TextField fx:id="searchField" layoutX="30" layoutY="70" promptText="Search Users..." prefWidth="250"/>
+        <Button fx:id="addUserButton" layoutX="290" layoutY="70" text="Add User" onAction="#handleAddUser"/>
+
+        <TableView fx:id="userTable" layoutX="30" layoutY="120" prefWidth="600" prefHeight="300">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="nameColumn" text="Name" prefWidth="150"/>
+                <TableColumn fx:id="emailColumn" text="Email" prefWidth="200"/>
+                <TableColumn fx:id="roleColumn" text="Role" prefWidth="100"/>
+            </columns>
+        </TableView>
+
+        <Button fx:id="editUserButton" layoutX="30" layoutY="440" text="Edit User" onAction="#handleEditUser"/>
+        <Button fx:id="deleteUserButton" layoutX="130" layoutY="440" text="Delete User" onAction="#handleDeleteUser"/>
+
+        <!-- Status label -->
+        <Label fx:id="statusLabel" layoutX="30" layoutY="480" textFill="green" style="-fx-font-size: 12px;"/>
+    </children>
+</AnchorPane>

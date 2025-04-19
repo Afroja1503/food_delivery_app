@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.AdminDashboardController"
+            xmlns="http://javafx.com/javafx">
+<children>
+    <Label layoutX="30" layoutY="20" text="Admin Dashboard" style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
+
+    <VBox layoutX="30" layoutY="70" spacing="10">
+        <Button fx:id="userManagementBtn" text="User Management" onAction="#handleUserManagement" />
+        <Button fx:id="systemSettingsBtn" text="System Settings" onAction="#handleSystemSettings" />
+        <Button fx:id="systemLogsBtn" text="System Logs" onAction="#handleSystemLogs" />
+        <Button fx:id="permissionsBtn" text="Manage Permissions" onAction="#handlePermissions" />
+        <Button fx:id="reportsBtn" text="Generate Reports" onAction="#handleReports" />
+        <Button fx:id="backupsBtn" text="Manage Backups" onAction="#handleBackups" />
+        <Button fx:id="systemHealthBtn" text="Monitor System Health" onAction="#handleSystemHealth" />
+        <Button fx:id="tosBtn" text="Update Terms of Service" onAction="#handleTOS" />
+    </VBox>
+</children>
+</AnchorPane>

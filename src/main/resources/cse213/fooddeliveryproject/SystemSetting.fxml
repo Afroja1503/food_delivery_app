@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.SystemSettingsController"
+            xmlns="http://javafx.com/javafx">
+    <children>
+        <Label layoutX="30" layoutY="20" text="System Settings" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+        <Label layoutX="30" layoutY="80" text="Payment Gateway Enabled:"/>
+        <CheckBox fx:id="paymentCheckbox" layoutX="220" layoutY="75"/>
+
+        <Label layoutX="30" layoutY="120" text="Delivery Fee:"/>
+        <TextField fx:id="deliveryFeeField" layoutX="220" layoutY="115" prefWidth="150"/>
+
+        <Label layoutX="30" layoutY="160" text="Operational Hours:"/>
+        <TextField fx:id="hoursField" layoutX="220" layoutY="155" prefWidth="150" promptText="e.g. 8AM - 10PM"/>
+
+        <Button fx:id="saveSettingsBtn" layoutX="220" layoutY="200" text="Save Settings" onAction="#handleSaveSettings"/>
+
+        <Label fx:id="statusLabel" layoutX="30" layoutY="250" style="-fx-text-fill: green;"/>
+    </children>
+</AnchorPane>
