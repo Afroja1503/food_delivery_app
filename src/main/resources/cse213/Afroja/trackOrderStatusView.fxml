@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="484.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.Afroja.TrackOrderStatusViewController">
+   <children>
+      <Label layoutX="47.0" layoutY="41.0" prefHeight="17.0" prefWidth="63.0" text="Order Id:" />
+      <Label layoutX="47.0" layoutY="83.0" text="Restaurant Id:" />
+      <TextField fx:id="orderIdTextField" layoutX="118.0" layoutY="37.0" />
+      <TextField fx:id="restaurantIdTextField" layoutX="118.0" layoutY="79.0" />
+      <Button layoutX="47.0" layoutY="143.0" mnemonicParsing="false" onAction="#addToArrayListToTrackOrderOnActionButton" text="Add to ArrayList to Track Order" />
+      <Button layoutX="280.0" layoutY="143.0" mnemonicParsing="false" onAction="#saveArrayListToBinaryFileForTrackOrderOnActionButton" text="Save ArrayList to Binary File For Track Order" />
+      <Button layoutX="435.0" layoutY="188.0" mnemonicParsing="false" onAction="#loadTrackOrderOnActionButton" text="Load Track Order" />
+      <TableView fx:id="trackOrderTableView" layoutX="51.0" layoutY="230.0" prefHeight="158.0" prefWidth="575.0">
+        <columns>
+          <TableColumn fx:id="customerIdTableColumn" prefWidth="78.0" text="Customer Id " />
+          <TableColumn fx:id="orderIdTableColumn" prefWidth="57.0" text="Order Id" />
+            <TableColumn fx:id="priceTableColumn" prefWidth="44.0" text="Price" />
+            <TableColumn fx:id="orderStatusTableView" prefWidth="85.0" text="Order Status" />
+            <TableColumn fx:id="foodItemTableColumn1" prefWidth="71.0" text="Food Item" />
+            <TableColumn fx:id="quantityTableColumn" prefWidth="73.0" text="Quantity" />
+            <TableColumn fx:id="reataurantIdTableColumn" prefWidth="84.0" text="Restaurant Id" />
+            <TableColumn fx:id="trackingIdTableColumn" prefWidth="81.0" text="Tracking Id" />
+        </columns>
+      </TableView>
+      <Label layoutX="318.0" layoutY="41.0" text="Customer Id:" />
+      <TextField fx:id="customerIdTextField" layoutX="404.0" layoutY="37.0" />
+      <Label layoutX="318.0" layoutY="83.0" text="Tracking Id:" />
+      <TextField fx:id="trackingIdTextField" layoutX="404.0" layoutY="79.0" />
+      <Button layoutX="138.0" layoutY="188.0" mnemonicParsing="false" onAction="#loadOrderStatusOnActionButton" text="Load Order Status" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.Afroja.CustomerFeedbackViewController">
+   <children>
+      <Label layoutX="47.0" layoutY="41.0" text="Customer Id:" />
+      <TextField fx:id="customerIdTextField" layoutX="138.0" layoutY="37.0" />
+      <Button layoutX="300.0" layoutY="84.0" mnemonicParsing="false" onAction="#loadReviewOnActionButton" text="Load Reveiw " />
+      <TableView fx:id="reviewTableView" layoutX="81.0" layoutY="132.0" prefHeight="200.0" prefWidth="476.0">
+        <columns>
+          <TableColumn fx:id="customerIdTableColumn" prefWidth="75.0" text="Customer Id" />
+          <TableColumn fx:id="emailTableColmun" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="phoneNumberTableColumn" prefWidth="97.0" text="Phone Number" />
+            <TableColumn fx:id="foodItemTableColumn" prefWidth="79.0" text="Food Item" />
+            <TableColumn fx:id="ratingTableColumn" prefWidth="64.0" text="Rating" />
+            <TableColumn fx:id="reviewTableColumn" prefWidth="57.0" text="Review" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

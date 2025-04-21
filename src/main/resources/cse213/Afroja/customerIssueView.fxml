@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.Afroja.CustomerComplaintViewController">
+   <children>
+      <Button layoutX="374.0" layoutY="120.0" mnemonicParsing="false" onAction="#loadCustomerIssueOnActionButton" text="Load Customer Issue" />
+      <Label layoutX="47.0" layoutY="79.0" text="Issue Id:" />
+      <TextField fx:id="issueIdTextField" layoutX="151.0" layoutY="75.0" />
+      <TableView fx:id="viewIssueTable" layoutX="47.0" layoutY="166.0" prefHeight="200.0" prefWidth="534.0">
+        <columns>
+          <TableColumn fx:id="issueIdTableColumn" prefWidth="75.0" text="Issue Id" />
+          <TableColumn fx:id="customerIdTableColumn" prefWidth="75.0" text="Customer Id" />
+            <TableColumn fx:id="emailTableColumn" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="phoneTableColumn" prefWidth="75.0" text="Phone" />
+            <TableColumn fx:id="catagoryTableColumn" prefWidth="75.0" text="Catagory " />
+            <TableColumn fx:id="messageTableColumn" prefWidth="75.0" text="Message" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="75.0" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

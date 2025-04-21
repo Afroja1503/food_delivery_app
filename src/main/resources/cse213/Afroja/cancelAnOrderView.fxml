@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.Afroja.CancelAnOrderViewController">
+   <children>
+      <Label layoutX="269.0" layoutY="56.0" prefHeight="17.0" prefWidth="144.0" text="Reason For Cancellation:" />
+      <Label layoutX="36.0" layoutY="56.0" text="Order Id:" />
+      <TextField fx:id="orderIdTextField" layoutX="93.0" layoutY="52.0" />
+      <TextField fx:id="reasonForCancellationTextField" layoutX="413.0" layoutY="52.0" />
+      <Button layoutX="406.0" layoutY="188.0" mnemonicParsing="false" onAction="#loadCancelOrderOnAction" prefHeight="25.0" prefWidth="144.0" text="Load Cancel Order" />
+      <Button layoutX="40.0" layoutY="125.0" mnemonicParsing="false" onAction="#addToArrayListCancelOrderOnAction" text="Add to ArrayList Cancel Order" />
+      <Button layoutX="256.0" layoutY="125.0" mnemonicParsing="false" onAction="#saveArrayListToBinaryFileForCancelOrderOnActionButton" text="Save ArrayList to Binary File For Cancel Order" />
+      <Label fx:id="cancelOrderLabel" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="99.0" layoutY="241.0" prefHeight="98.0" prefWidth="323.0" style="-fx-border-color: red;" text="Cancel Order:" />
+   </children>
+</AnchorPane>

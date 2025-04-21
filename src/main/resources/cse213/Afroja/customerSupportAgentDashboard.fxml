@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="customertAgentBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.Afroja.ControllerClass.cse213.Afroja.CustomerSupportAgentDashboardController">
+   <top>
+      <MenuBar prefHeight="31.0" prefWidth="741.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox prefHeight="472.0" prefWidth="141.0" style="-fx-background-color: LightSeaGreen;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#customerIssueOnAction" prefHeight="25.0" prefWidth="133.0" text="Customer Issue">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#viewCustomerProfileOnAction" prefHeight="25.0" prefWidth="134.0" text="View Customer Profile">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#orderInquiryOnAction" prefHeight="25.0" prefWidth="134.0" text="Order Inquiry">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#deliveryDelayOnActibn" prefHeight="25.0" prefWidth="134.0" text="Delivery Delay">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#customerReviewOnAction" prefHeight="25.0" prefWidth="134.0" text="Customer Review">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleRefundOnAction" prefHeight="25.0" prefWidth="134.0" text="Handle Refund">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#FAQSectionOnAction" prefHeight="25.0" prefWidth="134.0" text="FAQ Section">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#viewOrderHistoryOfACustomerOnAction" prefHeight="25.0" prefWidth="134.0" text="View Order History" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="469.0" prefWidth="605.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="63.0" layoutY="100.0" prefHeight="153.0" prefWidth="426.0" style="-fx-background-color: MediumAquamarine;" text="Dashboard">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="251.0" layoutY="193.0" text="Customer Support Agent">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

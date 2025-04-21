@@ -3,6 +3,6 @@ module cse213.fooddeliveryproject {
     requires javafx.fxml;
 
 
-    opens cse213.fooddeliveryproject to javafx.fxml;
-    exports cse213.fooddeliveryproject;
+    opens cse213.Afroja to javafx.fxml;
+    exports cse213.Afroja;
 }
