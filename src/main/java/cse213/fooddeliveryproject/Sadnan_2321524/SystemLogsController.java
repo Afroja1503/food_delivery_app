@@ -2,9 +2,16 @@ package cse213.fooddeliveryproject.Sadnan_2321524;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -58,5 +65,19 @@ public class SystemLogsController {
 
     private String now() {
         return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+    }
+    @FXML
+    void handleBackAction(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/cse213/fooddeliveryproject/AdminDashboard.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Admin Dashboard");
+            stage.show();
+        } catch (IOException e) {
+            statusLabel.setText("Failed to load Admin Dashboard.");
+            statusLabel.setStyle("-fx-text-fill: red;");
+            e.printStackTrace();
+        }
     }
 }

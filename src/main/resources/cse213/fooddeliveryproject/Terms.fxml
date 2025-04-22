@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="518.0" prefWidth="638.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.TermsController">
+    <children>
+        <Label layoutX="204.0" layoutY="19.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Update Terms of Service" />
+        <Button fx:id="backButton" layoutX="30" layoutY="20" onAction="#handleBackAction" text="Back" />
+        <TextArea fx:id="termsEditor" layoutX="28.0" layoutY="63.0" prefHeight="400" prefWidth="586.0" wrapText="true" />
+
+        <Button fx:id="previewBtn" layoutX="38.0" layoutY="480.0" onAction="#handlePreview" text="Preview" />
+        <Button fx:id="publishBtn" layoutX="120" layoutY="480" onAction="#handlePublish" text="Publish" />
+
+        <Label fx:id="statusLabel" layoutX="20" layoutY="530" textFill="green" />
+    </children>
+</AnchorPane>

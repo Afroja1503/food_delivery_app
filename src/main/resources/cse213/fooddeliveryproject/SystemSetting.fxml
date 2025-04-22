@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.SystemSettingsController"
-            xmlns="http://javafx.com/javafx">
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.SystemSettingController">
     <children>
-        <Label layoutX="30" layoutY="20" text="System Settings" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <Button fx:id="backButton" layoutX="20.0" layoutY="20.0" onAction="#handleBackAction" text="Back" />
+        <Label layoutX="120" layoutY="20" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="System Settings" />
+        <Label layoutX="30" layoutY="80" text="Payment Gateway Enabled:" />
+        <CheckBox fx:id="paymentCheckbox" layoutX="230.0" layoutY="79.0" />
 
-        <Label layoutX="30" layoutY="80" text="Payment Gateway Enabled:"/>
-        <CheckBox fx:id="paymentCheckbox" layoutX="220" layoutY="75"/>
+        <Label layoutX="30" layoutY="120" text="Delivery Fee:" />
+        <TextField fx:id="deliveryFeeField" layoutX="173.0" layoutY="116.0" prefWidth="150" />
 
-        <Label layoutX="30" layoutY="120" text="Delivery Fee:"/>
-        <TextField fx:id="deliveryFeeField" layoutX="220" layoutY="115" prefWidth="150"/>
+        <Label layoutX="30" layoutY="160" text="Operational Hours:" />
+        <TextField fx:id="hoursField" layoutX="173.0" layoutY="156.0" prefWidth="150" promptText="e.g. 8AM - 10PM" />
 
-        <Label layoutX="30" layoutY="160" text="Operational Hours:"/>
-        <TextField fx:id="hoursField" layoutX="220" layoutY="155" prefWidth="150" promptText="e.g. 8AM - 10PM"/>
+        <Button fx:id="saveSettingsBtn" layoutX="230.0" layoutY="200" onAction="#handleSaveSettings" text="Save Settings" />
 
-        <Button fx:id="saveSettingsBtn" layoutX="220" layoutY="200" text="Save Settings" onAction="#handleSaveSettings"/>
-
-        <Label fx:id="statusLabel" layoutX="30" layoutY="250" style="-fx-text-fill: green;"/>
+        <!-- Status -->
+        <Label fx:id="statusLabel" layoutX="30" layoutY="250" style="-fx-text-fill: green;" />
     </children>
 </AnchorPane>

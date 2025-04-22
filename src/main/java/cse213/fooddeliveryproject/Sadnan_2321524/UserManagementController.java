@@ -3,10 +3,15 @@ package cse213.fooddeliveryproject.Sadnan_2321524;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
-import javafx.scene.control.cell.PropertyValueFactory;
-import cse213.fooddeliveryproject.Sadnan_2321524.User;
+import javafx.scene.Node;
+import java.io.IOException;
 
 public class UserManagementController {
 
@@ -14,6 +19,7 @@ public class UserManagementController {
     @FXML private Button addUserButton;
     @FXML private Button editUserButton;
     @FXML private Button deleteUserButton;
+    @FXML private Button backButton;
     @FXML private Label statusLabel;
 
     @FXML private TableView<User> userTable;
@@ -82,6 +88,20 @@ public class UserManagementController {
             statusLabel.setText("User deleted.");
         } else {
             statusLabel.setText("No user selected.");
+        }
+    }
+
+    @FXML
+    void handleBackAction(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/cse213/fooddeliveryproject/AdminDashboard.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Admin Dashboard");
+            stage.show();
+        } catch (IOException e) {
+            statusLabel.setText("Failed to load Admin Dashboard.");
+            e.printStackTrace();
         }
     }
 }

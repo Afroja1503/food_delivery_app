@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400" prefWidth="700" style="-fx-padding: 20;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.CustomerFeedbackController">
+
+    <Label layoutX="86.0" layoutY="19.0" style="-fx-font-size: 18;" text="Customer Feedback" />
+    <Button fx:id="backButton" layoutX="30" layoutY="20" onAction="#handleBackAction" text="Back" />
+    <TableView fx:id="feedbackTable" layoutX="30" layoutY="60" prefHeight="300" prefWidth="640">
+        <columns>
+            <TableColumn fx:id="orderIdCol" prefWidth="100" text="Order ID" />
+            <TableColumn fx:id="customerNameCol" prefWidth="150" text="Customer" />
+            <TableColumn fx:id="ratingCol" prefWidth="100" text="Rating" />
+            <TableColumn fx:id="commentCol" prefWidth="290" text="Comment" />
+        </columns>
+    </TableView>
+</AnchorPane>

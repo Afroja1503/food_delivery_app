@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.AdminDashboardController"
-            xmlns="http://javafx.com/javafx">
-<children>
-    <Label layoutX="30" layoutY="20" text="Admin Dashboard" style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
 
-    <VBox layoutX="30" layoutY="70" spacing="10">
-        <Button fx:id="userManagementBtn" text="User Management" onAction="#handleUserManagement" />
-        <Button fx:id="systemSettingsBtn" text="System Settings" onAction="#handleSystemSettings" />
-        <Button fx:id="systemLogsBtn" text="System Logs" onAction="#handleSystemLogs" />
-        <Button fx:id="permissionsBtn" text="Manage Permissions" onAction="#handlePermissions" />
-        <Button fx:id="reportsBtn" text="Generate Reports" onAction="#handleReports" />
-        <Button fx:id="backupsBtn" text="Manage Backups" onAction="#handleBackups" />
-        <Button fx:id="systemHealthBtn" text="Monitor System Health" onAction="#handleSystemHealth" />
-        <Button fx:id="tosBtn" text="Update Terms of Service" onAction="#handleTOS" />
-    </VBox>
+<AnchorPane prefHeight="348.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.AdminDashboardController">
+<children>
+    <Label layoutX="103.0" layoutY="22.0" style="-fx-font-size: 28px; -fx-font-weight: bold;" text="Admin Dashboard" />
+
+    <VBox layoutX="30" layoutY="70" spacing="10" />
+     <Button fx:id="tosBtn" layoutX="285.0" layoutY="309.0" onAction="#handleTOS" text="Update Terms of Service" />
+     <Button fx:id="systemSettingsBtn" layoutX="181.0" layoutY="148.0" onAction="#handleSystemSettings" text="System Settings" />
+     <Button fx:id="systemLogsBtn" layoutX="348.0" layoutY="190.0" onAction="#handleSystemLogs" text="System Logs" />
+     <Button fx:id="systemHealthBtn" layoutX="130.0" layoutY="307.0" onAction="#handleSystemHealth" text="Monitor System Health" />
+     <Button fx:id="reportsBtn" layoutX="3.0" layoutY="307.0" onAction="#handleReports" text="Generate Reports" />
+     <Button fx:id="backupsBtn" layoutX="178.0" layoutY="233.0" onAction="#handleBackups" text="Manage Backups" />
+     <Button fx:id="permissionsBtn" layoutX="8.0" layoutY="190.0" onAction="#handlePermissions" text="Manage Permissions" />
+     <Button fx:id="userManagementBtn" layoutX="175.0" layoutY="82.0" onAction="#handleUserManagement" text="User Management" />
 </children>
 </AnchorPane>
