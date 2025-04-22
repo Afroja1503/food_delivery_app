@@ -1,19 +1,71 @@
 package cse213.Afroja.UserNonUser;
 
-public class Refund {
-    private String refundId,orderId,paymentMethodId,refundReason,refundStatus;
+import java.io.Serializable;
+
+public class Refund implements Serializable {
+    private String refundId,orderId,paymentMethod,refundReason,refundStatus,email,phoneNumber,orderDate;
     private float refundAmount;
 
-    public Refund() {
+    public Refund(String text, String emailTextFieldText) {
     }
 
-    public Refund(String refundId, String orderId, String paymentMethodId, String refundReason, String refundStatus, float refundAmount) {
+    public Refund(String refundId, String orderId, String paymentMethod, String refundReason, String refundStatus, String email, String phoneNumber, String orderDate, float refundAmount) {
         this.refundId = refundId;
         this.orderId = orderId;
-        this.paymentMethodId = paymentMethodId;
+        this.paymentMethod = paymentMethod;
         this.refundReason = refundReason;
         this.refundStatus = refundStatus;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.orderDate = orderDate;
         this.refundAmount = refundAmount;
+    }
+
+    @Override
+    public String toString() {
+        return "Refund{" +
+                "refundId='" + refundId + '\'' +
+                ", orderId='" + orderId + '\'' +
+                ", paymentMethod='" + paymentMethod + '\'' +
+                ", refundReason='" + refundReason + '\'' +
+                ", refundStatus='" + refundStatus + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", orderDate='" + orderDate + '\'' +
+                ", refundAmount=" + refundAmount +
+                '}';
+    }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(String orderDate) {
+        this.orderDate = orderDate;
     }
 
     public String getRefundId() {
@@ -32,13 +84,7 @@ public class Refund {
         this.orderId = orderId;
     }
 
-    public String getPaymentMethodId() {
-        return paymentMethodId;
-    }
 
-    public void setPaymentMethodId(String paymentMethodId) {
-        this.paymentMethodId = paymentMethodId;
-    }
 
     public String getRefundReason() {
         return refundReason;
@@ -64,17 +110,6 @@ public class Refund {
         this.refundAmount = refundAmount;
     }
 
-    @Override
-    public String toString() {
-        return "Refund{" +
-                "refundId='" + refundId + '\'' +
-                ", orderId='" + orderId + '\'' +
-                ", paymentMethodId='" + paymentMethodId + '\'' +
-                ", refundReason='" + refundReason + '\'' +
-                ", refundStatus='" + refundStatus + '\'' +
-                ", refundAmount=" + refundAmount +
-                '}';
-    }
     public void processRefund(){
 
     }
@@ -83,5 +118,9 @@ public class Refund {
     }
     public void updateRefundStatus(String newRefundStatus){
 
+    }
+    public boolean processRefund(String method, double amount) {
+
+        return true;
     }
 }

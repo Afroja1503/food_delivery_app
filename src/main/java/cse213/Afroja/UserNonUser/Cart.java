@@ -133,4 +133,12 @@ public class Cart implements Serializable {
     public void clearCart(CartItem item){
 
     }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getStatus() {
+        return status;
+    }
 }

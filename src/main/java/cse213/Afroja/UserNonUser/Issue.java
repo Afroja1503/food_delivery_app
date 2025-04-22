@@ -1,23 +1,57 @@
 package cse213.Afroja.UserNonUser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
-public class Issue {
-    private String  issueId,issueDescription,issueStatus,customerId,assignedAgentId;
-    private  IssueCatagory catagory;
+public class Issue implements Serializable {
+    private String  issueId,issueDescription,issueStatus,customerId,assignedAgentId,orderId;
+    private  String issueCatagory;
     private LocalDate creationDate;
 
     public Issue() {
     }
 
-    public Issue(String issueId, String issueDescription, String issueStatus, String customerId, String assignedAgentId, IssueCatagory catagory, LocalDate creationDate) {
+    public Issue(String issueId, String issueDescription, String issueStatus, LocalDate creationDate) {
         this.issueId = issueId;
         this.issueDescription = issueDescription;
         this.issueStatus = issueStatus;
         this.customerId = customerId;
         this.assignedAgentId = assignedAgentId;
-        this.catagory = catagory;
+        this.orderId = orderId;
+        this.issueCatagory = issueCatagory;
         this.creationDate = creationDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Issue{" +
+                "issueId='" + issueId + '\'' +
+                ", issueDescription='" + issueDescription + '\'' +
+                ", issueStatus='" + issueStatus + '\'' +
+                ", customerId='" + customerId + '\'' +
+                ", assignedAgentId='" + assignedAgentId + '\'' +
+                ", orderId='" + orderId + '\'' +
+                ", issueCatagory='" + issueCatagory + '\'' +
+                ", creationDate=" + creationDate +
+                '}';
+    }
+
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
+    public String getIssueCatagory() {
+        return issueCatagory;
+    }
+
+    public void setIssueCatagory(String issueCatagory) {
+        this.issueCatagory = issueCatagory;
     }
 
     public String getIssueId() {
@@ -60,14 +94,6 @@ public class Issue {
         this.assignedAgentId = assignedAgentId;
     }
 
-    public IssueCatagory getCatagory() {
-        return catagory;
-    }
-
-    public void setCatagory(IssueCatagory catagory) {
-        this.catagory = catagory;
-    }
-
     public LocalDate getCreationDate() {
         return creationDate;
     }
@@ -76,20 +102,10 @@ public class Issue {
         this.creationDate = creationDate;
     }
 
-    @Override
-    public String toString() {
-        return "Issue{" +
-                "issueId='" + issueId + '\'' +
-                ", issueDescription='" + issueDescription + '\'' +
-                ", issueStatus='" + issueStatus + '\'' +
-                ", customerId='" + customerId + '\'' +
-                ", assignedAgentId='" + assignedAgentId + '\'' +
-                ", catagory=" + catagory +
-                ", creationDate=" + creationDate +
-                '}';
-    }
-    public void createIssue(){
-
+    public  String generateIssueId() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmssSSS");
+        String timestamp = LocalDateTime.now().format(formatter);
+        return "ISSUE-" + timestamp;
     }
 
     public void updateIssueStatus(String newStatus){

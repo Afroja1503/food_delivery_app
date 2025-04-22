@@ -17,14 +17,15 @@ public class CustomerSupportAgentDashboardController {
         }
 
         @FXML
-        void FAQSectionOnAction(ActionEvent event) {
+        void updateOrderStatusOnAction(ActionEvent event) {
                 try{
-                        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("fAQSectionView.fxml"));
+                        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("updateOrderStatusView.fxml"));
                         customertAgentBorderPane.setCenter(fxmlLoader.load());
 
                 } catch (Exception e) {
 
                 }
+
         }
 
         @FXML

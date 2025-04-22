@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="orderIdLabel" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.Afroja.LoadIssueController">
+   <children>
+      <Label layoutX="62.0" layoutY="174.0" text="Issue Description:" />
+      <Label layoutX="61.0" layoutY="219.0" text="Issue Catagory:" />
+      <Label layoutX="62.0" layoutY="261.0" text="Issue Status:" />
+      <Label layoutX="60.0" layoutY="90.0" text="Customer Id:" />
+      <Label layoutX="61.0" layoutY="127.0" text="Order Id:" />
+      <Label fx:id="customerIdLabel" layoutX="177.0" layoutY="89.0" prefHeight="17.0" prefWidth="247.0" style="-fx-border-color: blue;" />
+      <Label fx:id="orderIdLabel" layoutX="177.0" layoutY="126.0" prefHeight="17.0" prefWidth="247.0" style="-fx-border-color: blue;" />
+      <Label fx:id="issueDescriptionLabel" layoutX="177.0" layoutY="173.0" prefHeight="17.0" prefWidth="247.0" style="-fx-border-color: blue;" />
+      <Label fx:id="issueCatagoryLabel" layoutX="177.0" layoutY="218.0" prefHeight="17.0" prefWidth="247.0" style="-fx-border-color: blue;" />
+      <Label fx:id="issueStatusLabel" layoutX="177.0" layoutY="260.0" prefHeight="17.0" prefWidth="247.0" style="-fx-border-color: blue;" />
+      <Label layoutX="60.0" layoutY="54.0" text="Issue Id:" />
+      <Label fx:id="issueIdLabel" layoutX="177.0" layoutY="53.0" prefHeight="17.0" prefWidth="247.0" style="-fx-border-color: blue;" />
+   </children>
+</AnchorPane>

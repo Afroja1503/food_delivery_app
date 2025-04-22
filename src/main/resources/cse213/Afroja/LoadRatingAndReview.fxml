@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.Afroja.LoadRatingAndReviewController">
+   <children>
+      <Label layoutX="69.0" layoutY="68.0" text="Customer Id:" />
+      <Label layoutX="69.0" layoutY="115.0" text="Food Item:" />
+      <Label layoutX="69.0" layoutY="155.0" text="Rating Number:" />
+      <Label layoutX="69.0" layoutY="192.0" text="Review:" />
+      <Label fx:id="customerIdLabel" layoutX="178.0" layoutY="63.0" prefHeight="27.0" prefWidth="219.0" style="-fx-border-color: green;" />
+      <Label fx:id="foodItemLabel" layoutX="178.0" layoutY="110.0" prefHeight="27.0" prefWidth="219.0" style="-fx-border-color: green;" />
+      <Label fx:id="ratingNumberLabel" layoutX="178.0" layoutY="150.0" prefHeight="27.0" prefWidth="219.0" style="-fx-border-color: green;" />
+      <Label fx:id="reviewLabel" layoutX="178.0" layoutY="187.0" prefHeight="27.0" prefWidth="219.0" style="-fx-border-color: green;" />
+      <Label layoutX="69.0" layoutY="229.0" text="Restaurant Id:" />
+      <Label fx:id="restaurantIdLabel" layoutX="178.0" layoutY="224.0" prefHeight="27.0" prefWidth="219.0" style="-fx-border-color: green;" />
+   </children>
+</AnchorPane>
