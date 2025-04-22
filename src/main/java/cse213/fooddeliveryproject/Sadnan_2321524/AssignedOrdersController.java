@@ -37,7 +37,6 @@ public class AssignedOrdersController {
 
     @FXML
     public void initialize() {
-        // Bind table columns to Order properties
         orderIdCol.setCellValueFactory(data -> data.getValue().orderIdProperty());
         customerNameCol.setCellValueFactory(data -> data.getValue().customerNameProperty());
         addressCol.setCellValueFactory(data -> data.getValue().addressProperty());
@@ -47,7 +46,6 @@ public class AssignedOrdersController {
     }
 
     private void loadOrders() {
-        // Simulated DB fetch
         orders.clear();
         orders.addAll(
                 new Order("1001", "John Doe", "123 Main St", "10:00 AM"),
@@ -69,10 +67,10 @@ public class AssignedOrdersController {
             Parent root = FXMLLoader.load(getClass().getResource("/cse213/fooddeliveryproject/DeliveryManDashboard.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("Admin Dashboard");
+            stage.setTitle("Assigned Orders");
             stage.show();
         } catch (IOException e) {
-            statusLabel.setText("Failed to load Admin Dashboard.");
+            statusLabel.setText("Failed to load Assigned Orders.");
             e.printStackTrace();
         }
     }

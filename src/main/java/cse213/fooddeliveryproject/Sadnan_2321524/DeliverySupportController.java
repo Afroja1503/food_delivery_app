@@ -56,10 +56,10 @@ public class DeliverySupportController {
             Parent root = FXMLLoader.load(getClass().getResource("/cse213/fooddeliveryproject/DeliveryManDashboard.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("Admin Dashboard");
+            stage.setTitle("Delivery Support");
             stage.show();
         } catch (IOException e) {
-            System.err.println("Failed to load Admin Dashboard.");
+            System.err.println("Failed to load Delivery Support.");
             e.printStackTrace();
         }
     }

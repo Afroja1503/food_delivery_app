@@ -60,10 +60,10 @@ public class HealthController {
             Parent root = FXMLLoader.load(getClass().getResource("/cse213/fooddeliveryproject/AdminDashboard.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("Admin Dashboard");
+            stage.setTitle("Health");
             stage.show();
         } catch (IOException e) {
-            System.err.println("Failed to load Admin Dashboard.");
+            System.err.println("Failed to load Health.");
             e.printStackTrace();
         }
     }

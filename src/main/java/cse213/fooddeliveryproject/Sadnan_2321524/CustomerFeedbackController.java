@@ -74,10 +74,10 @@ public class CustomerFeedbackController {
             Parent root = FXMLLoader.load(getClass().getResource("/cse213/fooddeliveryproject/DeliveryManDashboard.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("Admin Dashboard");
+            stage.setTitle("Customer Feedback");
             stage.show();
         } catch (IOException e) {
-            System.err.println("Failed to load Admin Dashboard.");
+            System.err.println("Failed to load Customer Feedback.");
             e.printStackTrace();
         }
     }
