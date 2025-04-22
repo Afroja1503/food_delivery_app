@@ -1,20 +1,24 @@
 package cse213.fooddeliveryproject.Zahidur;
 
+import java.time.LocalDate;
+
 public class HrManager {
     public int hrId;
-    public double salary;
     public String name,email,phone,position;
+    public double salary;
+    public LocalDate joinDate;
 
     public HrManager() {
     }
 
-    public HrManager(int hrId, double salary, String name, String email, String phone, String position) {
+    public HrManager(int hrId, String name, String email, String phone, String position, double salary, LocalDate joinDate) {
         this.hrId = hrId;
-        this.salary = salary;
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.position = position;
+        this.salary = salary;
+        this.joinDate = joinDate;
     }
 
     public int getHrId() {
@@ -23,14 +27,6 @@ public class HrManager {
 
     public void setHrId(int hrId) {
         this.hrId = hrId;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
     }
 
     public String getName() {
@@ -65,15 +61,32 @@ public class HrManager {
         this.position = position;
     }
 
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public LocalDate getJoinDate() {
+        return joinDate;
+    }
+
+    public void setJoinDate(LocalDate joinDate) {
+        this.joinDate = joinDate;
+    }
+
     @Override
     public String toString() {
         return "HrManager{" +
                 "hrId=" + hrId +
-                ", salary=" + salary +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 ", position='" + position + '\'' +
+                ", salary=" + salary +
+                ", joinDate=" + joinDate +
                 '}';
     }
 }
