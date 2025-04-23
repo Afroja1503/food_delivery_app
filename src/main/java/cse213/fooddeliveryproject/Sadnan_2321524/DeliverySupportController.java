@@ -11,7 +11,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class DeliverySupportController {
@@ -25,6 +27,8 @@ public class DeliverySupportController {
     @FXML
     private Label confirmationLabel;
 
+    private static final String FILE_NAME = "support_tickets.bin";
+
     @FXML
     void handleSubmit() {
         String orderId = orderIdField.getText().trim();
@@ -36,20 +40,47 @@ public class DeliverySupportController {
             return;
         }
 
-        // Simulate ticket generation
         String ticketId = "TKT-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
 
-        // Simulate storing support request (in real system, call a DB or API here)
-        System.out.println("Support Request Submitted:");
-        System.out.println("Order ID: " + orderId);
-        System.out.println("Issue: " + issue);
-        System.out.println("Ticket ID: " + ticketId);
+        // Create a SupportTicket object
+        SupportTicket ticket = new SupportTicket(ticketId, orderId, issue);
+
+        // Save the ticket
+        saveTicket(ticket);
 
         confirmationLabel.setText("Ticket created: " + ticketId);
         confirmationLabel.setStyle("-fx-text-fill: green;");
         orderIdField.clear();
         issueField.clear();
     }
+
+    private void saveTicket(SupportTicket ticket) {
+        List<SupportTicket> tickets = loadTickets();
+        tickets.add(ticket);
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
+            oos.writeObject(tickets);
+        } catch (IOException e) {
+            e.printStackTrace();
+            confirmationLabel.setText("Error saving ticket.");
+            confirmationLabel.setStyle("-fx-text-fill: red;");
+        }
+    }
+
+    @SuppressWarnings("unchecked")
+    private List<SupportTicket> loadTickets() {
+        File file = new File(FILE_NAME);
+        if (!file.exists()) {
+            return new ArrayList<>();
+        }
+
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+            return (List<SupportTicket>) ois.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
+    }
+
     @FXML
     void handleBackAction(ActionEvent event) {
         try {

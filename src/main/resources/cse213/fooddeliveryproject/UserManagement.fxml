@@ -1,28 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="509.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.UserManagementController">
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.UserManagementController">
     <children>
-        <Button fx:id="backButton" layoutX="30" layoutY="20" onAction="#handleBackAction" text="Back" />
-        <Label layoutX="177.0" layoutY="21.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="User Management Panel" />
-        <TextField fx:id="searchField" layoutX="93.0" layoutY="70.0" prefWidth="250" promptText="Search Users..." />
-        <Button fx:id="addUserButton" layoutX="369.0" layoutY="70.0" onAction="#handleAddUser" text="Add User" />
-        <TableView fx:id="userTable" layoutX="30" layoutY="122.0" prefHeight="298.0" prefWidth="580.0">
+        <TextField fx:id="nameField" layoutX="14.0" layoutY="14.0" promptText="Enter Name" />
+        <TextField fx:id="emailField" layoutX="14.0" layoutY="50.0" promptText="Enter Email" />
+        <ComboBox fx:id="roleComboBox" layoutX="14.0" layoutY="90.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Customer" />
+                    <String fx:value="Seller" />
+                    <String fx:value="Admin" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <Button fx:id="addUserButton" layoutX="14.0" layoutY="140.0" onAction="#handleAddUser" text="Add User" />
+        <Button fx:id="deleteUserButton" layoutX="14.0" layoutY="180.0" onAction="#handleDeleteUser" text="Delete User" />
+        <Button fx:id="backButton" layoutX="14.0" layoutY="220.0" onAction="#handleBackAction" text="Back" />
+
+        <Label fx:id="statusLabel" layoutX="100.0" layoutY="260.0" />
+
+        <TableView fx:id="userTable" layoutX="174.0" layoutY="14.0" prefHeight="400.0" prefWidth="576.0">
             <columns>
-                <TableColumn fx:id="idColumn" prefWidth="50" text="ID" />
-                <TableColumn fx:id="nameColumn" prefWidth="150" text="Name" />
-                <TableColumn fx:id="emailColumn" prefWidth="200" text="Email" />
-                <TableColumn fx:id="roleColumn" prefWidth="100" text="Role" />
+                <TableColumn fx:id="idColumn" prefWidth="150.0" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="emailColumn" prefWidth="150.0" text="Email" />
+                <TableColumn fx:id="roleColumn" prefWidth="150.0" text="Role" />
             </columns>
         </TableView>
-
-        <!-- Edit and Delete -->
-        <Button fx:id="editUserButton" layoutX="30" layoutY="440" onAction="#handleEditUser" text="Edit User" />
-        <Button fx:id="deleteUserButton" layoutX="532.0" layoutY="440.0" onAction="#handleDeleteUser" text="Delete User" />
-
-        <!-- Status -->
-        <Label fx:id="statusLabel" layoutX="30" layoutY="480" style="-fx-font-size: 12px;" textFill="green" />
     </children>
 </AnchorPane>

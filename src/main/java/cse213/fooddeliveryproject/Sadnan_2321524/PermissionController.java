@@ -83,10 +83,10 @@ public class PermissionController {
             Parent root = FXMLLoader.load(getClass().getResource("/cse213/fooddeliveryproject/AdminDashboard.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("Admin Dashboard");
+            stage.setTitle("Permission");
             stage.show();
         } catch (IOException e) {
-            statusLabel.setText("Failed to load Admin Dashboard.");
+            statusLabel.setText("Failed to load Permission.");
             e.printStackTrace();
         }
     }

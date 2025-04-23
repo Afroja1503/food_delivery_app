@@ -85,4 +85,18 @@ public class DeliveryManDashboardController {
         statusLabel.setText("Reading customer reviews.");
         switchScene(event, "/cse213/fooddeliveryproject/CustomerFeedback.fxml", "Customer Feedback");
     }
+
+    @FXML
+    void handleBackAction(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/cse213/fooddeliveryproject/Login.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Delivery Man");
+            stage.show();
+        } catch (IOException e) {
+            System.err.println("Failed to load Delivery Man");
+            e.printStackTrace();
+        }
+    }
 }

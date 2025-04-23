@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="348.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.AdminDashboardController">
+<AnchorPane prefHeight="348.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.AdminDashboardController">
 <children>
-    <Label layoutX="103.0" layoutY="22.0" style="-fx-font-size: 28px; -fx-font-weight: bold;" text="Admin Dashboard" />
-
+    <Label layoutX="103.0" layoutY="70.0" style="-fx-font-size: 28px; -fx-font-weight: bold;" text="Admin Dashboard" />
+    <Button fx:id="backButton" layoutX="30" layoutY="20" onAction="#handleBackAction" text="Log Out" />
     <VBox layoutX="30" layoutY="70" spacing="10" />
-     <Button fx:id="tosBtn" layoutX="285.0" layoutY="309.0" onAction="#handleTOS" text="Update Terms of Service" />
-     <Button fx:id="systemSettingsBtn" layoutX="181.0" layoutY="148.0" onAction="#handleSystemSettings" text="System Settings" />
-     <Button fx:id="systemLogsBtn" layoutX="348.0" layoutY="190.0" onAction="#handleSystemLogs" text="System Logs" />
-     <Button fx:id="systemHealthBtn" layoutX="130.0" layoutY="307.0" onAction="#handleSystemHealth" text="Monitor System Health" />
-     <Button fx:id="reportsBtn" layoutX="3.0" layoutY="307.0" onAction="#handleReports" text="Generate Reports" />
-     <Button fx:id="backupsBtn" layoutX="178.0" layoutY="233.0" onAction="#handleBackups" text="Manage Backups" />
-     <Button fx:id="permissionsBtn" layoutX="8.0" layoutY="190.0" onAction="#handlePermissions" text="Manage Permissions" />
-     <Button fx:id="userManagementBtn" layoutX="175.0" layoutY="82.0" onAction="#handleUserManagement" text="User Management" />
+     <Button fx:id="tosBtn" layoutX="246.0" layoutY="249.0" onAction="#handleTOS" prefHeight="26.0" prefWidth="114.0" text="Update Terms of Service" />
+     <Button fx:id="systemSettingsBtn" layoutX="54.0" layoutY="174.0" onAction="#handleSystemSettings" prefHeight="26.0" prefWidth="114.0" text="System Settings" />
+     <Button fx:id="systemLogsBtn" layoutX="246.0" layoutY="174.0" onAction="#handleSystemLogs" prefHeight="26.0" prefWidth="114.0" text="System Logs" />
+     <Button fx:id="systemHealthBtn" layoutX="246.0" layoutY="210.0" onAction="#handleSystemHealth" prefHeight="26.0" prefWidth="114.0" text="Monitor System Health" />
+     <Button fx:id="reportsBtn" layoutX="54.0" layoutY="135.0" onAction="#handleReports" prefHeight="26.0" prefWidth="114.0" text="Generate Reports" />
+     <Button fx:id="backupsBtn" layoutX="54.0" layoutY="249.0" onAction="#handleBackups" prefHeight="26.0" prefWidth="114.0" text="Manage Backups" />
+     <Button fx:id="permissionsBtn" layoutX="54.0" layoutY="210.0" onAction="#handlePermissions" prefHeight="26.0" prefWidth="114.0" text="Manage Permissions" />
+     <Button fx:id="userManagementBtn" layoutX="246.0" layoutY="135.0" onAction="#handleUserManagement" text="User Management" />
 </children>
 </AnchorPane>
