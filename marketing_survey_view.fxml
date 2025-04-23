@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="fooddelivery.fooddeliveryapp.MarketingSurveyController">
+
+    <VBox spacing="10" alignment="CENTER" AnchorPane.topAnchor="0"
+          AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <padding><Insets top="20" left="20" right="20" bottom="20"/></padding>
+
+        <Label text="Customer Surveys and Feedback"
+               style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+        <TextField fx:id="txtFormat" promptText="Survey Format (MCQ, Star, Open-ended)" prefWidth="300"/>
+        <TextField fx:id="txtQuestion" promptText="Survey Question" prefWidth="300"/>
+        <TextField fx:id="txtTargetGroup" promptText="Target Audience" prefWidth="300"/>
+
+        <Button text="Launch Survey" onAction="#handleLaunchSurvey" prefWidth="300"/>
+        <Label fx:id="lblSurveyMessage" style="-fx-text-fill: green;"/>
+    </VBox>
+</AnchorPane>

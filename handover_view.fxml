@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="fooddelivery.fooddeliveryapp.HandoverController">
+
+    <VBox alignment="CENTER" spacing="10"
+          AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <padding>
+            <Insets top="20" bottom="20" left="20" right="20"/>
+        </padding>
+
+        <Label text="Order Handover to Rider"
+               style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+        <TableView fx:id="prepOrderTable" prefWidth="600" prefHeight="200">
+            <columns>
+                <TableColumn fx:id="orderIdCol" text="Order ID" prefWidth="80"/>
+                <TableColumn fx:id="itemsCol" text="Items" prefWidth="140"/>
+                <TableColumn fx:id="addressCol" text="Address" prefWidth="180"/>
+                <TableColumn fx:id="statusCol" text="Status" prefWidth="120"/>
+            </columns>
+        </TableView>
+
+        <HBox spacing="10">
+            <Button text="Mark as Ready" onAction="#handleMarkAsReady"/>
+            <Button text="Confirm Handover" onAction="#handleConfirmHandover"/>
+        </HBox>
+
+        <Label fx:id="lblMessage" style="-fx-text-fill: green;" />
+    </VBox>
+</AnchorPane>

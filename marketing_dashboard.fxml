@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fooddelivery.fooddeliveryapp.MarketingDashboardController">
+
+    <!-- Sidebar Menu -->
+    <left>
+        <VBox alignment="TOP_CENTER" prefHeight="415.0" prefWidth="499.0" spacing="10" style="-fx-background-color: #2c3e50;">
+            <padding><Insets bottom="20" left="10" right="10" top="30" /></padding>
+
+            <Label style="-fx-font-size: 18px; -fx-text-fill: white;" text="Marketing Panel" />
+
+            <Button onAction="#loadCampaigns" prefWidth="180" text="Campaigns" />
+            <Button onAction="#loadAnalytics" prefWidth="180" text="Analytics" />
+            <Button onAction="#loadSocialMedia" prefWidth="180" text="Social Media Ads" />
+            <Button onAction="#loadLoyalty" prefWidth="180" text="Loyalty and Rewards" />
+            <Button onAction="#loadSurveys" prefWidth="180" text="Surveys and Feedback" />
+            <Button onAction="#loadPartnerships" prefWidth="180" text="Partner Deals" />
+            <Button onAction="#loadDiscounts" prefWidth="180" text="Discount Strategy" />
+            <Button onAction="#loadBrand" prefWidth="180" text="Brand Management" />
+
+            <Separator />
+            <Button onAction="#handleLogout" prefWidth="180" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" text="Logout" />
+        </VBox>
+    </left>
+
+    <!-- Main View Area -->
+    <center>
+        <AnchorPane fx:id="mainContent" style="-fx-background-color: #ecf0f1;" />
+    </center>
+</BorderPane>
