@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="fooddelivery.fooddeliveryapp.ProfileController">
+
+    <VBox alignment="CENTER" spacing="10"
+          AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+
+        <Label text="Restaurant Profile" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <TextField fx:id="txtName" promptText="Restaurant Name" prefWidth="300"/>
+        <TextField fx:id="txtAddress" promptText="Address" prefWidth="300"/>
+        <TextField fx:id="txtPhone" promptText="Phone" prefWidth="300"/>
+        <TextField fx:id="txtHours" promptText="Opening Hours" prefWidth="300"/>
+        <TextField fx:id="txtCuisine" promptText="Cuisine Type" prefWidth="300"/>
+        <TextField fx:id="txtLogo" promptText="Logo Path (optional)" prefWidth="300"/>
+        <TextArea fx:id="txtDescription" promptText="Description" prefWidth="300" prefRowCount="3" wrapText="true"/>
+
+        <!-- Message Label -->
+        <Label fx:id="lblMessage" style="-fx-text-fill: red;" />
+
+        <Button text="Update Profile" onAction="#handleUpdateProfile" prefWidth="300"/>
+
+        <Separator/>
+        <Label text="Saved Profile Info" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+        <Label fx:id="displayName"/>
+        <Label fx:id="displayAddress"/>
+        <Label fx:id="displayPhone"/>
+        <Label fx:id="displayCuisine"/>
+        <Label fx:id="displayHours"/>
+        <Label fx:id="displayLogo"/>
+        <TextArea fx:id="displayDescription" prefWidth="300" prefRowCount="3" wrapText="true" editable="false"/>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="fooddelivery.fooddeliveryapp.SalesReportController">
+
+    <VBox alignment="CENTER" spacing="10"
+          AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+
+        <Label text="Sales Revenue Report" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+        <HBox spacing="10">
+            <ComboBox fx:id="dateRangeCombo" promptText="Select Date Range"/>
+            <Button text="Generate Report" onAction="#handleGenerateReport"/>
+        </HBox>
+
+        <TableView fx:id="salesTable" prefWidth="600" prefHeight="200">
+            <columns>
+                <TableColumn fx:id="orderIdCol" text="Order ID" prefWidth="80"/>
+                <TableColumn fx:id="customerCol" text="Customer" prefWidth="120"/>
+                <TableColumn fx:id="statusCol" text="Status" prefWidth="100"/>
+                <TableColumn fx:id="totalCol" text="Amount (BDT)" prefWidth="120"/>
+            </columns>
+        </TableView>
+
+        <Label fx:id="lblTotalOrders" />
+        <Label fx:id="lblTotalRevenue" />
+        <Label fx:id="lblBestItem" />
+        <Label fx:id="lblMessage" style="-fx-text-fill: green;" />
+
+    </VBox>
+</AnchorPane>

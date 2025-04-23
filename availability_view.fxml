@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="fooddelivery.fooddeliveryapp.AvailabilityController">
+
+    <VBox alignment="CENTER" spacing="10"
+          AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <padding>
+            <Insets top="20" bottom="20" left="20" right="20"/>
+        </padding>
+
+        <Label text="Restaurant Operating Hours" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+        <TextField fx:id="txtOpeningTime" promptText="Opening Time (e.g. 09:00)" prefWidth="300"/>
+        <TextField fx:id="txtClosingTime" promptText="Closing Time (e.g. 22:00)" prefWidth="300"/>
+        <CheckBox fx:id="chkOpen" text="Currently Open" />
+
+        <Button text="Update Availability" onAction="#handleUpdateAvailability" prefWidth="300"/>
+
+        <Label fx:id="lblStatus" style="-fx-font-size: 14px;"/>
+        <Label fx:id="lblMessage" style="-fx-text-fill: green;" />
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fooddelivery.fooddeliveryapp.SellerDashboardController">
+
+    <!-- Sidebar Navigation -->
+    <left>
+        <VBox alignment="TOP_CENTER" prefHeight="458.0" prefWidth="547.0" spacing="12" style="-fx-background-color: #2c3e50;">
+            <padding>
+                <Insets bottom="30" left="10" right="10" top="30" />
+            </padding>
+
+            <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: white;" text="Seller Dashboard" />
+
+            <Separator />
+
+            <Button onAction="#loadProfile" prefHeight="26.0" prefWidth="256.0" styleClass="nav-button" text="Profile" />
+            <Button onAction="#loadMenu" prefHeight="26.0" prefWidth="254.0" styleClass="nav-button" text="Menu" />
+            <Button onAction="#loadOrders" prefHeight="26.0" prefWidth="256.0" styleClass="nav-button" text="Orders" />
+            <Button onAction="#loadHandover" prefHeight="26.0" prefWidth="257.0" styleClass="nav-button" text="Handover" />
+            <Button onAction="#loadReports" prefHeight="26.0" prefWidth="257.0" styleClass="nav-button" text="Reports" />
+            <Button onAction="#loadAvailability" prefHeight="26.0" prefWidth="258.0" styleClass="nav-button" text="Availability" />
+            <Button onAction="#loadComplaints" prefHeight="26.0" prefWidth="255.0" styleClass="nav-button" text="Complaints" />
+            <Button onAction="#loadPromotions" prefHeight="26.0" prefWidth="260.0" styleClass="nav-button" text="Promotions" />
+
+            <Separator />
+
+            <Button onAction="#handleLogout" prefWidth="180" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold;" text="Logout" />
+        </VBox>
+    </left>
+
+    <!-- Main Content Area -->
+    <center>
+        <AnchorPane fx:id="mainContent" style="-fx-background-color: #ecf0f1;" />
+    </center>
+</BorderPane>
