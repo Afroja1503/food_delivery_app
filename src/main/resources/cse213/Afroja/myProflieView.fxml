@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="558.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.Afroja.ControllerClass.cse213.Afroja.MyProflieViewController">
+   <children>
+      <Label layoutX="65.0" layoutY="150.0" text="Name:" />
+      <Label layoutX="67.0" layoutY="195.0" text="Email:" />
+      <Label layoutX="67.0" layoutY="236.0" text="Mobile Number:" />
+      <Label layoutX="361.0" layoutY="163.0" text="Address:" />
+      <Label layoutX="361.0" layoutY="236.0" text="New Password:" />
+      <TextField fx:id="customerNameTextField" layoutX="177.0" layoutY="146.0" />
+      <TextField fx:id="emailTextField" layoutX="177.0" layoutY="191.0" />
+      <TextField fx:id="mobileNumberTextField" layoutX="177.0" layoutY="232.0" />
+      <TextField fx:id="addressTextField" layoutX="489.0" layoutY="159.0" />
+      <TextField fx:id="newPasswordTextField" layoutX="489.0" layoutY="232.0" />
+      <Button layoutX="467.0" layoutY="354.0" mnemonicParsing="false" onAction="#loadUpdateProfileOnActionButton" text="Load Update Profile" />
+      <Label fx:id="updatedProfileInformationLabel" alignment="TOP_LEFT" layoutX="65.0" layoutY="390.0" prefHeight="109.0" prefWidth="399.0" style="-fx-border-color: aqua;" text="Updated Profile Information:" />
+      <Button layoutX="65.0" layoutY="314.0" mnemonicParsing="false" onAction="#addUpdatedProfileOnActionButton" text="Add Updated Profile" />
+      <Button layoutX="227.0" layoutY="314.0" mnemonicParsing="false" onAction="#saveArrayListToBinaryFileForUpdatedProfile" text="Save ArrayList to Binary File For Updated Profile" />
+      <Button layoutX="80.0" layoutY="60.0" mnemonicParsing="false" onAction="#showProfileInformationOnActionButton" text="Show Profile Information" />
+      <Label fx:id="profileInformationLabel" alignment="TOP_LEFT" layoutX="356.0" layoutY="44.0" prefHeight="82.0" prefWidth="274.0" style="-fx-border-color: blue;" text="Profile  Information:" />
+   </children>
+</AnchorPane>
