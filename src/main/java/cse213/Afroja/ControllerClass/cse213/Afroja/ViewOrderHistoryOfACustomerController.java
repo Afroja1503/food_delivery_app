@@ -100,9 +100,9 @@ public class ViewOrderHistoryOfACustomerController {
 
 
             while (true) {
-                OrderHistory order = (OrderHistory) ois.readObject();
+                OrderHistory orderHistory = (OrderHistory) ois.readObject();
+                Order order = orderHistory.getPastOrder();
                 orderHistoryOfCustomerTableView.getItems().add(order);
-
             }
         } catch (Exception e) {
             try {

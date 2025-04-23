@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="484.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.Afroja.TrackOrderStatusViewController">
+<AnchorPane prefHeight="484.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.Afroja.ControllerClass.cse213.Afroja.TrackOrderStatusViewController">
    <children>
       <Label layoutX="47.0" layoutY="41.0" prefHeight="17.0" prefWidth="63.0" text="Order Id:" />
       <Label layoutX="47.0" layoutY="83.0" text="Restaurant Id:" />

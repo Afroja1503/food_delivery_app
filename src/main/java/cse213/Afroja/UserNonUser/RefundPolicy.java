@@ -1,9 +1,10 @@
 package cse213.Afroja.UserNonUser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class RefundPolicy {
+public class RefundPolicy implements Serializable {
     private String returnPolicyId,description,refundId;
     private int maxRefundDay;
     private ArrayList<String> eligibleCondition;

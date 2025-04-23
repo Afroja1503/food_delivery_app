@@ -1,8 +1,9 @@
 package cse213.Afroja.UserNonUser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class PaymentMethod {
+public class PaymentMethod implements Serializable {
     private String paymentMethodId,customerId,cardNumber,methodType;
     private LocalDate expiryDate;
 

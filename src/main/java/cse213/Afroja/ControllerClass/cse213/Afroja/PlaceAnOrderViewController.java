@@ -72,7 +72,7 @@ public class PlaceAnOrderViewController {
         if (deliveryAddressTextField.getText().length() < 5 || deliveryAddressTextField.getText().isEmpty()) {
 
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText("Please enter a valid delivery address.");
+            alert.setContentText("Please enter a valid delivery address address length will be minimum 5 .");
             alert.show();
             return;
 
@@ -159,10 +159,7 @@ public class PlaceAnOrderViewController {
 
 
         }
-        Alert a = new Alert(Alert.AlertType.CONFIRMATION);
-        a.setContentText("Cart added successfully");
-        a.show();
-        return;
+
     }
 
 
@@ -253,7 +250,12 @@ public class PlaceAnOrderViewController {
             } catch (Exception e2) {
                 //
             }
+
         }
+        Alert a = new Alert(Alert.AlertType.CONFIRMATION);
+        a.setContentText("Order Placed successfully");
+        a.show();
+
     }
 
     @FXML
@@ -280,6 +282,7 @@ public class PlaceAnOrderViewController {
 
 
         }
+
     }
 }
 

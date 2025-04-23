@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="507.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.Afroja.OrderInquiryViewController">
+<AnchorPane prefHeight="507.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.Afroja.ControllerClass.cse213.Afroja.OrderInquiryViewController">
    <children>
       <Label layoutX="54.0" layoutY="54.0" text="Inquiry Id:" />
       <Label layoutX="54.0" layoutY="100.0" text="Order Id:" />

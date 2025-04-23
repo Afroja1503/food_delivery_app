@@ -182,6 +182,11 @@ public class RateAndReviewOrderViewController {
                 //
             }
         }
+        Alert a = new Alert(Alert.AlertType.ERROR);
+        a.setContentText("You have no orders to review yet");
+        a.show();
+        return;
+
     }
 
 
@@ -214,6 +219,10 @@ public class RateAndReviewOrderViewController {
             //
 
         }
+        Alert a = new Alert(Alert.AlertType.CONFIRMATION);
+        a.setContentText("Thank you! Your review has been submitted.");
+        a.show();
+
     }
 
 

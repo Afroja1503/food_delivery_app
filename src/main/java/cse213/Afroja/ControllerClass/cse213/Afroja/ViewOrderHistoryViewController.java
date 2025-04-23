@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.*;
 import java.time.LocalDate;
@@ -25,7 +26,7 @@ public class ViewOrderHistoryViewController {
     private TableColumn<Order, String> deliveryAddressTableColumn;
 
     @FXML
-    private TableColumn<Cart, String> foodItemTableColumn;
+    private TableColumn<Order, String> foodItemTableColumn;
 
     @FXML
     private TableColumn<Order, String> orderDateTableView;
@@ -46,10 +47,10 @@ public class ViewOrderHistoryViewController {
     private TableColumn<Order, String> paymentMethodTableColumn;
 
     @FXML
-    private TableColumn<Cart, String> priceTableColumn;
+    private TableColumn<Order, String> priceTableColumn;
 
     @FXML
-    private TableColumn<Cart,String> quantityTableColumn;
+    private TableColumn<Order,String> quantityTableColumn;
 
     @FXML
     private TableColumn<Order, String> restaurantTableColumn;
@@ -61,6 +62,16 @@ public class ViewOrderHistoryViewController {
         orderStatusComboBox.getItems().addAll("All","Delivered","Cancelled");
         dateToTextField.setValue(LocalDate.now());
         ArrayList<OrderHistory> deliveredOrders = new ArrayList<>();
+        orderIdTableColumn.setCellValueFactory(new PropertyValueFactory<Order,String>("orderId"));
+        orderDateTableView.setCellValueFactory(new PropertyValueFactory<Order,String>("creationDate"));
+        foodItemTableColumn.setCellValueFactory(new PropertyValueFactory<Order,String>("foodItem"));
+        priceTableColumn.setCellValueFactory(new PropertyValueFactory<Order,String>("price"));
+        orderStatusTableColumn.setCellValueFactory(new PropertyValueFactory<Order,String>("orderStatus"));
+        restaurantTableColumn.setCellValueFactory(new PropertyValueFactory<Order,String>("restaurant"));
+        quantityTableColumn.setCellValueFactory(new PropertyValueFactory<Order,String>("quantity"));
+        deliveryAddressTableColumn.setCellValueFactory(new PropertyValueFactory<Order,String>("deliveryAddress"));
+        paymentMethodTableColumn.setCellValueFactory(new PropertyValueFactory<Order,String>("paymentMethod"));
+
 
 
 

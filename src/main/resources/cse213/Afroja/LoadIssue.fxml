@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane fx:id="orderIdLabel" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.Afroja.LoadIssueController">
+<AnchorPane fx:id="orderIdLabel" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.Afroja.ControllerClass.cse213.Afroja.LoadIssueController">
    <children>
       <Label layoutX="62.0" layoutY="174.0" text="Issue Description:" />
       <Label layoutX="61.0" layoutY="219.0" text="Issue Catagory:" />

@@ -47,6 +47,18 @@ public class AddToCartViewController {
 
     @FXML
     void addToArrayListToCartOnActionButton(ActionEvent event) {
+        if (createdDatePicker.getValue() == null
+                || quantityTextField.getText().isEmpty() ||
+                priceTextField.getText().isEmpty()
+                || selectItemComboBox.getValue() == null
+                || selectRestaurantComboBox.getValue() == null
+                 || createdDatePicker.getValue() == null)
+        {
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Please fill up all field.");
+            a.show();
+            return;
+        }
         if (selectItemComboBox.getValue() == null || !availableItems.contains(selectItemComboBox.getValue())) {
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setContentText("The selected item is not available");

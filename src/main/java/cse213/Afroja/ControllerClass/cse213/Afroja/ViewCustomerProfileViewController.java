@@ -30,7 +30,7 @@ public class ViewCustomerProfileViewController {
     void loadCustomerProfileOnActionButton(ActionEvent event) {
         if (customerIdTextField.getText().isEmpty() ) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText("Please fill up at least one field.");
+            alert.setContentText("Please fill up the  field.");
             alert.show();
             return;
         }

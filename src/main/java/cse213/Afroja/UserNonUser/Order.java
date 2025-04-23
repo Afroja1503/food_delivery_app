@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Order extends Cart implements Serializable {
+    private final String customerId1;
     private double price;
 
 
@@ -13,8 +14,9 @@ public class Order extends Cart implements Serializable {
     private String  orderId,customerId,restaurantId,reasonForCancellation,trackingId,orderStatus,currentStatus,newStatus;
     private LocalDate dateOfUpdatedStatus;
 
-    public Order(Object o, String selectItemComboBoxValue, String selectRestaurantComboBoxValue, LocalDate dateOfUpdatedStatus) {
-        super(value, o, v, selectItemComboBoxValue, selectRestaurantComboBoxValue);
+    public Order(Object o, String selectItemComboBoxValue, String selectRestaurantComboBoxValue, String customerId1, String orderId) {
+        this.customerId1 = customerId1;
+
         this.price = price;
         this.orderId = orderId;
         this.customerId = customerId;
@@ -33,8 +35,10 @@ public class Order extends Cart implements Serializable {
         this.deliveryAddress = deliveryAddress;
     }
 
-    public Order(String cartId, String customerId, ArrayList<CartItem> item, LocalDate creationDate, float quantity, double price, String foodItem, String restaurant, double price1, String orderId, String customerId1, String restaurantId, String reasonForCancellation, String trackingId, String orderStatus, String currentStatus, String newStatus, LocalDate dateOfUpdatedStatus, ArrayList<OrderItem> orderItem, OrderStatus status, double totalAmount, LocalDate orderDate, String paymentMethod, String deliveryAddress) {
-        super(cartId, customerId, item, creationDate, quantity, price, foodItem, restaurant);
+    public Order(String cartId, String customerId, String customerId1) {
+        super(cartId, customerId, item, creationDate, quantity, price, foodItem, getRestaurant());
+        this.customerId1 = customerId1;
+        double price1   ;
         this.price = price1;
         this.orderId = orderId;
         this.customerId = customerId1;
@@ -53,7 +57,8 @@ public class Order extends Cart implements Serializable {
         this.deliveryAddress = deliveryAddress;
     }
 
-    public Order(double price, String orderId, String customerId, String restaurantId, String reasonForCancellation, String trackingId, String orderStatus, String currentStatus, String newStatus, LocalDate dateOfUpdatedStatus, ArrayList<OrderItem> orderItem, OrderStatus status, double totalAmount, LocalDate orderDate, String paymentMethod, String deliveryAddress) {
+    public Order(String customerId1, double price, String orderId, String customerId, String restaurantId, String reasonForCancellation, String trackingId, String orderStatus, String currentStatus, String newStatus, LocalDate dateOfUpdatedStatus, ArrayList<OrderItem> orderItem, OrderStatus status, double totalAmount, LocalDate orderDate, String paymentMethod, String deliveryAddress) {
+        this.customerId1 = customerId1;
         this.price = price;
         this.orderId = orderId;
         this.customerId = customerId;
@@ -70,6 +75,10 @@ public class Order extends Cart implements Serializable {
         this.orderDate = orderDate;
         this.paymentMethod = paymentMethod;
         this.deliveryAddress = deliveryAddress;
+    }
+
+    public Order(String text, String value, String value1, LocalDate value2, String customerId1) {
+        this.customerId1 = customerId1;
     }
 
     @Override
@@ -91,6 +100,13 @@ public class Order extends Cart implements Serializable {
                 ", orderDate=" + orderDate +
                 ", paymentMethod='" + paymentMethod + '\'' +
                 ", deliveryAddress='" + deliveryAddress + '\'' +
+                ", cartId='" + cartId + '\'' +
+                ", customerId='" + customerId + '\'' +
+                ", item=" + item +
+                ", creationDate=" + creationDate +
+                ", quantity=" + quantity +
+                ", price=" + price +
+                ", foodItem='" + foodItem + '\'' +
                 '}';
     }
 
@@ -190,10 +206,12 @@ public class Order extends Cart implements Serializable {
 
 
 
-    public Order() {
+    public Order(String customerId1) {
+        this.customerId1 = customerId1;
     }
 
-    public Order(ArrayList<OrderItem> orderItem) {
+    public Order(String customerId1, ArrayList<OrderItem> orderItem) {
+        this.customerId1 = customerId1;
         this.orderItem = orderItem;
     }
 
@@ -232,9 +250,7 @@ public class Order extends Cart implements Serializable {
         return orderItem;
     }
 
-    public OrderStatus getStatus() {
-        return status;
-    }
+
 
 
 

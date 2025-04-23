@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Issue implements Serializable {
+public class Issue  {
     private String  issueId,issueDescription,issueStatus,customerId,assignedAgentId,orderId;
     private  String issueCatagory;
     private LocalDate creationDate;

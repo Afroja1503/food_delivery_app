@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 
 public class TrackOrderStatusViewController {
     @FXML
-    private TableColumn<Customer, String> customerIdTableColumn;
+    private TableColumn<Order, String> customerIdTableColumn;
 
     @FXML
     private TextField customerIdTextField;
@@ -31,7 +32,7 @@ public class TrackOrderStatusViewController {
     private TextField restaurantIdTextField;
 
     @FXML
-    private TableColumn<OrderItem,String> foodItemTableColumn1;
+    private TableColumn<Order,String> foodItemTableColumn1;
 
     @FXML
     private TableColumn<Order, String> orderIdTableColumn;
@@ -43,10 +44,10 @@ public class TrackOrderStatusViewController {
     private TableColumn<Order, String> orderStatusTableView;
 
     @FXML
-    private TableColumn<Cart, String> priceTableColumn;
+    private TableColumn<Order, String> priceTableColumn;
 
     @FXML
-    private TableColumn<Cart, String> quantityTableColumn;
+    private TableColumn<Order, String> quantityTableColumn;
 
     @FXML
     private TableView<Order> trackOrderTableView;
@@ -63,6 +64,13 @@ public class TrackOrderStatusViewController {
     private void initialize(){
         trackOrderArrayList = new ArrayList<>();
         ArrayList<Order> OrderList = new ArrayList<>();
+        customerIdTableColumn.setCellValueFactory(new PropertyValueFactory<Order,String>("customerId"));
+        orderIdTableColumn.setCellValueFactory(new PropertyValueFactory<Order,String>("orderId"));
+        priceTableColumn.setCellValueFactory(new PropertyValueFactory<Order,String>("price"));
+        foodItemTableColumn1.setCellValueFactory(new PropertyValueFactory<Order,String>("foodItem"));
+        quantityTableColumn.setCellValueFactory(new PropertyValueFactory<Order,String>("quantity"));
+        reataurantIdTableColumn.setCellValueFactory(new PropertyValueFactory<Order,String>("restaurantId"));
+        trackingIdTableColumn.setCellValueFactory(new PropertyValueFactory<Order,String>("trackingId"));
 
     }
     @FXML
@@ -89,7 +97,7 @@ public class TrackOrderStatusViewController {
 
         if ( OrderList.isEmpty() ||  OrderList == null) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("No Orders.No recent orders found.");
+                alert.setContentText("No recent orders found.");
                 alert.show();
                 return;
         }

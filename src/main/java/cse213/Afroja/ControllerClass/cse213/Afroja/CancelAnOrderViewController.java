@@ -1,4 +1,4 @@
-package cse213.Afroja.ControllerClass;
+package cse213.Afroja.ControllerClass.cse213.Afroja;
 import cse213.Afroja.AppendableObjectOutputStream;
 import cse213.Afroja.UserNonUser.Cart;
 import cse213.Afroja.UserNonUser.Customer;
@@ -91,10 +91,8 @@ public class CancelAnOrderViewController {
 
         Order or1 = new Order(
                     orderIdTextField.getText(),
-                    reasonForCancellationTextField.getText(),
-                    null, // Placeholder for missing constructor parameters
-                    null  // Adjust based on the actual structure of Order
-            );
+                    reasonForCancellationTextField.getText());
+
             CancelOrderArrayList.add(or1);
             orderIdTextField.clear();
             reasonForCancellationTextField.clear();
@@ -142,6 +140,10 @@ public class CancelAnOrderViewController {
             catch (Exception e2) {
             }
         }
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setContentText("Order Cancelled Successfully");
+        alert.show();
+
 
 
 

@@ -1,8 +1,9 @@
 package cse213.Afroja.UserNonUser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class DeliveryDelayIssue extends Issue{
+public class DeliveryDelayIssue extends Issue implements Serializable {
     private String  deliveryDelayId,orderId,customerId,delayReason,delayStatus,orderStatus;
     private LocalDate createdDate,resolvedDate;
 

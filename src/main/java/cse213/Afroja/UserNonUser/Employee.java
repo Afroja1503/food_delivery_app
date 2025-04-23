@@ -1,8 +1,9 @@
 package cse213.Afroja.UserNonUser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public  abstract class Employee extends User {
+public  abstract class Employee extends User  {
     protected String employeeId,designation,department;
     protected LocalDate joiningDate;
     protected double salary;

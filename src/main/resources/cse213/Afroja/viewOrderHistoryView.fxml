@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="455.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.Afroja.cse213.Afroja.ViewOrderHistoryViewController">
+<AnchorPane prefHeight="455.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.Afroja.ControllerClass.cse213.Afroja.ViewOrderHistoryViewController">
    <children>
       <Label layoutX="40.0" layoutY="38.0" text="Date From:" />
       <Label layoutX="40.0" layoutY="86.0" text="Date To:" />

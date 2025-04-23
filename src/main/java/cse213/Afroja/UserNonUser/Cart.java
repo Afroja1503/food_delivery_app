@@ -5,13 +5,13 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Cart implements Serializable {
-    private String  cartId,customerId;
-    private ArrayList<CartItem> item;
+    protected String  cartId,customerId;
+    protected ArrayList<CartItem> item;
 
-    private LocalDate creationDate;
-    private float quantity;
-    private double price;
-    private String foodItem;
+    protected LocalDate creationDate;
+    protected float quantity;
+    protected double price;
+    protected String foodItem;
 
     public Cart(LocalDate value, Object o, double v, String selectItemComboBoxValue, String selectRestaurantComboBoxValue) {
     }
@@ -134,11 +134,5 @@ public class Cart implements Serializable {
 
     }
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
 
-    public String getStatus() {
-        return status;
-    }
 }

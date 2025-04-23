@@ -126,7 +126,7 @@ public class UpdateOrderStatusViewController {
         Alert a = new Alert(Alert.AlertType.CONFIRMATION);
         a.setContentText("Order Status updated successfully");
         a.show();
-        return;
+
     }
 
 

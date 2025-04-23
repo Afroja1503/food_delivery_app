@@ -1,8 +1,9 @@
 package cse213.Afroja.UserNonUser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Notification {
+public class Notification implements Serializable {
     private String notificationId,notificationContent,recipient,notificationType,notificationStatus,customerId,customerAgentId;
     private LocalDate data;
 

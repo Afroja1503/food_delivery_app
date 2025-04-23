@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 
 
-public abstract class User {
+public abstract class User  {
         protected String userId,userName,email,phoneNumber,password,address;
         protected LocalDate dateOfBirth,registrationDate;
 

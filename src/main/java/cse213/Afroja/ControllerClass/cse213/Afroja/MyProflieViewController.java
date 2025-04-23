@@ -59,7 +59,7 @@ public  class MyProflieViewController {
                 }
                 if (!emailTextField.getText().contains("@") || !emailTextField.getText().endsWith(".com")) {
                         Alert a = new Alert(Alert.AlertType.ERROR);
-                        a.setContentText("Invalid email format. Must contain '@' and end with a valid domain like .com.");
+                        a.setContentText("Inavalid Email Format.Email must contain @ and .com after that");
                         a.show();
                         return;
 

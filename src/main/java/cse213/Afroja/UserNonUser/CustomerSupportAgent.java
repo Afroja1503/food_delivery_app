@@ -1,8 +1,9 @@
 package cse213.Afroja.UserNonUser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class CustomerSupportAgent extends Employee {
+public class CustomerSupportAgent extends Employee implements Serializable {
     private String customerAgentId, role;
 
     public CustomerSupportAgent() {

@@ -129,6 +129,10 @@ public class InformIssueViewController {
             } catch (Exception e2) {
             }
         }
+        Alert a = new Alert(Alert.AlertType.CONFIRMATION);
+        a.setContentText("Your request has been submitted. Our team will respond shortly!");
+        a.show();
+
     }
 
 
