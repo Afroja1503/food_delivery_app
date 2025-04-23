@@ -8,6 +8,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class AdminDashboardController {
 
     @FXML
@@ -68,6 +70,20 @@ public class AdminDashboardController {
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Error while switching scenes: " + e.getMessage());
+        }
+    }
+
+    @FXML
+    void handleBackAction(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/cse213/fooddeliveryproject/Login.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Admin Dashboard");
+            stage.show();
+        } catch (IOException e) {
+            System.err.println("Failed to load Admin Dashboard");
+            e.printStackTrace();
         }
     }
 }

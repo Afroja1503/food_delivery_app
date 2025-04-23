@@ -48,7 +48,6 @@ public class PermissionController {
     @FXML
     void handleSavePermissions() {
         for (UserPermission up : permissionList) {
-            // In a real app, persist each user's permissions to DB or config file
             System.out.println("Saving permissions for " + up.getUsername());
         }
         statusLabel.setText("Permissions updated.");
@@ -83,10 +82,10 @@ public class PermissionController {
             Parent root = FXMLLoader.load(getClass().getResource("/cse213/fooddeliveryproject/AdminDashboard.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("Admin Dashboard");
+            stage.setTitle("Permission");
             stage.show();
         } catch (IOException e) {
-            statusLabel.setText("Failed to load Admin Dashboard.");
+            statusLabel.setText("Failed to load Permission.");
             e.printStackTrace();
         }
     }

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="fooddelivery.fooddeliveryapp.MarketingCampaignController">
+
+    <VBox alignment="CENTER" spacing="10" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <padding>
+            <Insets top="20" bottom="20" left="20" right="20"/>
+        </padding>
+
+        <Label text="Create Promotional Campaign" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+        <TextField fx:id="txtPromoCode" promptText="Promo Code" prefWidth="300"/>
+        <TextField fx:id="txtDiscountType" promptText="Discount Type (Flat/%)" prefWidth="300"/>
+        <TextField fx:id="txtDiscountPercent" promptText="Discount Percent" prefWidth="300"/>
+        <TextField fx:id="txtEligibleItems" promptText="Eligible Items" prefWidth="300"/>
+        <TextField fx:id="txtDuration" promptText="Duration (e.g. 7 days)" prefWidth="300"/>
+        <TextField fx:id="txtTargetAudience" promptText="Target Audience" prefWidth="300"/>
+        <Button text="Launch Campaign" onAction="#handleLaunchCampaign" prefWidth="300"/>
+        <Label fx:id="lblMessage" style="-fx-text-fill: green;" />
+    </VBox>
+</AnchorPane>

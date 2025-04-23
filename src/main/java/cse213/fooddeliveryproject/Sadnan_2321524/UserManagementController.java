@@ -11,13 +11,16 @@ import javafx.stage.Stage;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
-import java.io.IOException;
+
+import java.io.*;
+import java.util.ArrayList;
 
 public class UserManagementController {
 
-    @FXML private TextField searchField;
+    @FXML private TextField nameField;
+    @FXML private TextField emailField;
+    @FXML private ComboBox<String> roleComboBox;
     @FXML private Button addUserButton;
-    @FXML private Button editUserButton;
     @FXML private Button deleteUserButton;
     @FXML private Button backButton;
     @FXML private Label statusLabel;
@@ -29,6 +32,7 @@ public class UserManagementController {
     @FXML private TableColumn<User, String> roleColumn;
 
     private ObservableList<User> userList = FXCollections.observableArrayList();
+    private ObservableList<User> archivedUsers = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
@@ -37,6 +41,8 @@ public class UserManagementController {
         emailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
         roleColumn.setCellValueFactory(new PropertyValueFactory<>("role"));
 
+        roleComboBox.setItems(FXCollections.observableArrayList("Customer", "Seller", "Admin"));
+
         userList.addAll(
                 new User(1, "Alice Johnson", "alice@example.com", "Customer"),
                 new User(2, "Bob Smith", "bob@example.com", "Seller"),
@@ -44,39 +50,28 @@ public class UserManagementController {
         );
 
         userTable.setItems(userList);
-
-        searchField.textProperty().addListener((obs, oldText, newText) -> filterUsers(newText));
-    }
-
-    private void filterUsers(String searchText) {
-        ObservableList<User> filtered = FXCollections.observableArrayList();
-        for (User u : userList) {
-            if (u.getName().toLowerCase().contains(searchText.toLowerCase()) ||
-                    u.getEmail().toLowerCase().contains(searchText.toLowerCase())) {
-                filtered.add(u);
-            }
-        }
-        userTable.setItems(filtered);
     }
 
     @FXML
     void handleAddUser(ActionEvent event) {
-        User newUser = new User(userList.size() + 1, "New User", "newuser@example.com", "Customer");
+        String name = nameField.getText();
+        String email = emailField.getText();
+        String role = roleComboBox.getValue();
+
+        if (name.isEmpty() || email.isEmpty() || role == null) {
+            statusLabel.setText("Please fill in all fields.");
+            return;
+        }
+
+        int newId = userList.size() + 1;
+        User newUser = new User(newId, name, email, role);
         userList.add(newUser);
         userTable.setItems(userList);
-        statusLabel.setText("New user added.");
-    }
 
-    @FXML
-    void handleEditUser(ActionEvent event) {
-        User selected = userTable.getSelectionModel().getSelectedItem();
-        if (selected != null) {
-            selected.setName(selected.getName() + " (Edited)");
-            userTable.refresh();
-            statusLabel.setText("User edited.");
-        } else {
-            statusLabel.setText("No user selected.");
-        }
+        nameField.clear();
+        emailField.clear();
+        roleComboBox.getSelectionModel().clearSelection();
+        statusLabel.setText("New user added.");
     }
 
     @FXML
@@ -84,10 +79,24 @@ public class UserManagementController {
         User selected = userTable.getSelectionModel().getSelectedItem();
         if (selected != null) {
             userList.remove(selected);
+            archivedUsers.add(selected);
             userTable.setItems(userList);
-            statusLabel.setText("User deleted.");
+            saveArchivedUsersToBinFile();
+            statusLabel.setText("User deleted and archived.");
         } else {
             statusLabel.setText("No user selected.");
+        }
+    }
+
+    @FXML
+    public void saveArchivedUsersToBinFile() {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("archived_users.bin"))) {
+            oos.writeObject(new ArrayList<>(archivedUsers));
+            System.out.println("Archived users saved to binary file.");
+            statusLabel.setText("Archived users saved successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+            statusLabel.setText("Error saving archive.");
         }
     }
 
@@ -97,10 +106,10 @@ public class UserManagementController {
             Parent root = FXMLLoader.load(getClass().getResource("/cse213/fooddeliveryproject/AdminDashboard.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("Admin Dashboard");
+            stage.setTitle("User Management");
             stage.show();
         } catch (IOException e) {
-            statusLabel.setText("Failed to load Admin Dashboard.");
+            statusLabel.setText("Failed to load User Management.");
             e.printStackTrace();
         }
     }

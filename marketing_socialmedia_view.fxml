@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="fooddelivery.fooddeliveryapp.MarketingSocialMediaController">
+
+    <VBox spacing="10" alignment="CENTER" AnchorPane.topAnchor="0"
+          AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <padding><Insets top="20" bottom="20" left="20" right="20"/></padding>
+
+        <Label text="Create Social Media Ad Campaign"
+               style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+        <TextField fx:id="txtPlatform" promptText="Platform (e.g. Facebook)" prefWidth="300"/>
+        <TextField fx:id="txtBudget" promptText="Budget (e.g. 10000)" prefWidth="300"/>
+        <TextField fx:id="txtAudience" promptText="Target Audience" prefWidth="300"/>
+        <TextField fx:id="txtDuration" promptText="Duration (e.g. 5 days)" prefWidth="300"/>
+        <TextField fx:id="txtMediaFile" promptText="Media File (image/video)" prefWidth="300"/>
+        <TextArea fx:id="txtAdCopy" promptText="Ad Copy" prefWidth="300" prefRowCount="3"/>
+
+        <Button text="Launch Ad Campaign" onAction="#handleLaunchAd" prefWidth="300"/>
+        <Label fx:id="lblAdMessage" style="-fx-text-fill: green;"/>
+    </VBox>
+</AnchorPane>

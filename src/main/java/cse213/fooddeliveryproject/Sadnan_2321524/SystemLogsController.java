@@ -35,7 +35,6 @@ public class SystemLogsController {
         typeColumn.setCellValueFactory(data -> data.getValue().typeProperty());
         messageColumn.setCellValueFactory(data -> data.getValue().messageProperty());
 
-        // Simulated logs
         logs.add(new LogEntry(now(), "INFO", "System started"));
         logs.add(new LogEntry(now(), "ERROR", "API failure on /orders"));
         logs.add(new LogEntry(now(), "WARN", "Disk usage at 90%"));
@@ -72,11 +71,10 @@ public class SystemLogsController {
             Parent root = FXMLLoader.load(getClass().getResource("/cse213/fooddeliveryproject/AdminDashboard.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("Admin Dashboard");
+            stage.setTitle("System Logs");
             stage.show();
         } catch (IOException e) {
-            statusLabel.setText("Failed to load Admin Dashboard.");
-            statusLabel.setStyle("-fx-text-fill: red;");
+            statusLabel.setText("Failed to load System Logs");
             e.printStackTrace();
         }
     }

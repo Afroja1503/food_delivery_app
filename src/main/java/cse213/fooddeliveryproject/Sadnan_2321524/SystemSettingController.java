@@ -53,11 +53,10 @@ public class SystemSettingController {
             Parent root = FXMLLoader.load(getClass().getResource("/cse213/fooddeliveryproject/AdminDashboard.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("Admin Dashboard");
+            stage.setTitle("System Setting");
             stage.show();
         } catch (IOException e) {
-            statusLabel.setText("Failed to load Admin Dashboard.");
-            statusLabel.setStyle("-fx-text-fill: red;");
+            statusLabel.setText("Failed to load System Setting");
             e.printStackTrace();
         }
     }
