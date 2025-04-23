@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="454.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.ReportController">
+    <children>
+        <Label layoutX="93.0" layoutY="17.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="System Reports" />
+        <Button fx:id="backButton" layoutX="30" layoutY="20" onAction="#handleBackAction" text="Back" />
+        <ComboBox fx:id="reportTypeCombo" layoutX="20" layoutY="60" prefWidth="200" />
+        <DatePicker fx:id="startDatePicker" layoutX="240" layoutY="60" prefWidth="120" />
+        <DatePicker fx:id="endDatePicker" layoutX="380" layoutY="60" prefWidth="120" />
+        <Button fx:id="generateReportBtn" layoutX="520" layoutY="60" onAction="#handleGenerateReport" text="Generate Report" />
+
+        <TextArea fx:id="reportOutputArea" layoutX="28.0" layoutY="110" prefHeight="377.0" prefWidth="666.0" wrapText="true" />
+        <Label fx:id="statusLabel" layoutX="20" layoutY="530" />
+    </children>
+</AnchorPane>

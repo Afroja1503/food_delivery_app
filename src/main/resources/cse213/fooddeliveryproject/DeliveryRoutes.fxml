@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400" prefWidth="700" style="-fx-padding: 20;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.DeliveryRoutesController">
+
+    <Label layoutX="82.0" layoutY="19.0" style="-fx-font-size: 18;" text="Your Assigned Delivery Routes" />
+    <Button fx:id="backButton" layoutX="30" layoutY="20" onAction="#handleBackAction" text="Back" />
+    <TableView fx:id="routesTable" layoutX="30" layoutY="60" prefHeight="300" prefWidth="640">
+        <columns>
+            <TableColumn fx:id="routeIdCol" prefWidth="100" text="Route ID" />
+            <TableColumn fx:id="destinationCol" prefWidth="200" text="Destination" />
+            <TableColumn fx:id="estimatedTimeCol" prefWidth="150" text="Estimated Time" />
+            <TableColumn fx:id="statusCol" prefWidth="150" text="Status" />
+        </columns>
+    </TableView>
+</AnchorPane>

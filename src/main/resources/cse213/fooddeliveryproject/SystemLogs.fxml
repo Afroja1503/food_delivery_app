@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.SystemLogsController" prefWidth="800" prefHeight="600">
+<AnchorPane prefHeight="598.0" prefWidth="800" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.SystemLogsController">
     <children>
-        <Label text="System Logs" layoutX="20" layoutY="20" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
-
-        <TableView fx:id="logTable" layoutX="20" layoutY="60" prefWidth="760" prefHeight="480">
+        <Button fx:id="backButton" layoutX="20.0" layoutY="20.0" onAction="#handleBackAction" text="Back" />
+        <Label layoutX="77.0" layoutY="20.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="System Logs" />
+        <TableView fx:id="logTable" layoutX="73.0" layoutY="75.0" prefHeight="480" prefWidth="653.0">
             <columns>
-                <TableColumn fx:id="timestampColumn" text="Timestamp" prefWidth="200" />
-                <TableColumn fx:id="typeColumn" text="Type" prefWidth="100" />
-                <TableColumn fx:id="messageColumn" text="Message" prefWidth="460" />
+                <TableColumn fx:id="timestampColumn" prefWidth="200" text="Timestamp" />
+                <TableColumn fx:id="typeColumn" prefWidth="100" text="Type" />
+                <TableColumn fx:id="messageColumn" prefWidth="460" text="Message" />
             </columns>
         </TableView>
 
-        <Button fx:id="exportBtn" text="Export Logs" layoutX="20" layoutY="550" onAction="#handleExport" />
+        <Button fx:id="exportBtn" layoutX="73.0" layoutY="560.0" onAction="#handleExport" text="Export Logs" />
         <Label fx:id="statusLabel" layoutX="130" layoutY="555" />
     </children>
 </AnchorPane>

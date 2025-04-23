@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600" prefWidth="800" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.PermissionController">
+    <children>
+        <Button fx:id="backButton" layoutX="20.0" layoutY="20.0" onAction="#handleBackAction" text="Back" />
+        <Label layoutX="75.0" layoutY="17.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Permission Management" />
+        <TableView fx:id="userPermissionTable" layoutX="20" layoutY="60" prefHeight="400" prefWidth="760">
+            <columns>
+                <TableColumn fx:id="usernameColumn" prefWidth="200" text="Username" />
+                <TableColumn fx:id="roleColumn" prefWidth="200" text="Role" />
+                <TableColumn fx:id="canViewEarningsColumn" prefWidth="180" text="Can View Earnings" />
+                <TableColumn fx:id="canChangePricesColumn" prefWidth="180" text="Can Change Prices" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="savePermissionsBtn" layoutX="20" layoutY="480" onAction="#handleSavePermissions" text="Save Changes" />
+        <Label fx:id="statusLabel" layoutX="140" layoutY="485" />
+    </children>
+</AnchorPane>

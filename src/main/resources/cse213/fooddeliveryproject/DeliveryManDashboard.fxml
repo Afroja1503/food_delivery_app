@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.DeliveryManDashboardController"
+            xmlns="http://javafx.com/javafx">
+
+    <children>
+        <Label layoutX="30" layoutY="20" text="Delivery Dashboard" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+        <Button fx:id="btnAssignedOrders" layoutX="30" layoutY="80" text="Assigned Orders" onAction="#handleAssignedOrders" />
+        <Button fx:id="btnUpdateStatus" layoutX="30" layoutY="130" text="Update Order Status" onAction="#handleUpdateOrderStatus" />
+        <Button fx:id="btnHistory" layoutX="30" layoutY="180" text="Delivery History" onAction="#handleDeliveryHistory" />
+        <Button fx:id="btnEarnings" layoutX="30" layoutY="230" text="Earnings" onAction="#handleEarnings" />
+        <Button fx:id="btnSupport" layoutX="30" layoutY="280" text="Contact Support" onAction="#handleContactSupport" />
+        <Button fx:id="btnAvailability" layoutX="30" layoutY="330" text="Update Availability" onAction="#handleUpdateAvailability" />
+        <Button fx:id="btnRoutes" layoutX="30" layoutY="380" text="View Routes" onAction="#handleViewRoutes" />
+        <Button fx:id="btnFeedback" layoutX="30" layoutY="430" text="Customer Feedback" onAction="#handleCustomerFeedback" />
+
+        <Label fx:id="statusLabel" layoutX="200" layoutY="480" prefWidth="400" style="-fx-text-fill: green;"/>
+    </children>
+</AnchorPane>

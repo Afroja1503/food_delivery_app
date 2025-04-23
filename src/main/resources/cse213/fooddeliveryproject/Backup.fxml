@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600" prefWidth="800" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.BackupController">
+    <children>
+        <Label layoutX="90.0" layoutY="17.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Backup Management" />
+        <Button fx:id="backButton" layoutX="30" layoutY="20" onAction="#handleBackAction" text="Back" />
+        <Button fx:id="startBackupBtn" layoutX="20" layoutY="60" onAction="#handleManualBackup" text="Start Backup Now" />
+        <Label layoutX="20" layoutY="100" text="Schedule Backup:" />
+        <ComboBox fx:id="scheduleCombo" layoutX="140" layoutY="95" prefWidth="150" />
+        <Button fx:id="setScheduleBtn" layoutX="310" layoutY="95" onAction="#handleSetSchedule" text="Set Schedule" />
+
+        <Label layoutX="20" layoutY="150" text="Backup History:" />
+        <ListView fx:id="backupHistoryList" layoutX="20" layoutY="180" prefHeight="300" prefWidth="760" />
+
+        <Label fx:id="statusLabel" layoutX="20" layoutY="500" textFill="green" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="410.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.UpdateOrderStatusController">
+
+    <children>
+        <Label layoutX="223.0" layoutY="20.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Update Order Status" />
+        <Button fx:id="backButton" layoutX="30" layoutY="20" onAction="#handleBackAction" text="Back" />
+        <TableView fx:id="orderStatusTable" layoutX="26.0" layoutY="61.0" prefHeight="300" prefWidth="600">
+            <columns>
+                <TableColumn fx:id="orderIdCol" prefWidth="100" text="Order ID" />
+                <TableColumn fx:id="customerNameCol" prefWidth="150" text="Customer" />
+                <TableColumn fx:id="currentStatusCol" prefWidth="150" text="Status" />
+                <TableColumn fx:id="updateCol" prefWidth="200" text="New Status" />
+            </columns>
+        </TableView>
+
+        <Button layoutX="26.0" layoutY="367.0" onAction="#handleSubmit" text="Submit Changes" />
+        <Label fx:id="statusLabel" layoutX="160" layoutY="385" style="-fx-text-fill: green;" />
+    </children>
+</AnchorPane>

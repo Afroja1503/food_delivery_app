@@ -2,57 +2,72 @@ package cse213.fooddeliveryproject.Sadnan_2321524;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class AdminDashboardController {
 
-    @FXML private Button userManagementBtn;
-    @FXML private Button systemSettingsBtn;
-    @FXML private Button systemLogsBtn;
-    @FXML private Button permissionsBtn;
-    @FXML private Button reportsBtn;
-    @FXML private Button backupsBtn;
-    @FXML private Button systemHealthBtn;
-    @FXML private Button tosBtn;
-
     @FXML
-    void handleUserManagement(ActionEvent event) {
+    private void handleUserManagement(ActionEvent event) {
         System.out.println("Navigating to User Management...");
-        // Add scene loading logic here
+        switchScene(event, "/cse213/fooddeliveryproject/UserManagement.fxml");
     }
 
     @FXML
-    void handleSystemSettings(ActionEvent event) {
+    private void handleSystemSettings(ActionEvent event) {
         System.out.println("Navigating to System Settings...");
+        switchScene(event, "/cse213/fooddeliveryproject/SystemSetting.fxml");
     }
 
     @FXML
-    void handleSystemLogs(ActionEvent event) {
+    private void handleSystemLogs(ActionEvent event) {
         System.out.println("Navigating to System Logs...");
+        switchScene(event, "/cse213/fooddeliveryproject/SystemLogs.fxml");
     }
 
     @FXML
-    void handlePermissions(ActionEvent event) {
+    private void handlePermissions(ActionEvent event) {
         System.out.println("Navigating to Permissions...");
+        switchScene(event, "/cse213/fooddeliveryproject/Permission.fxml");
     }
 
     @FXML
-    void handleReports(ActionEvent event) {
+    private void handleReports(ActionEvent event) {
         System.out.println("Navigating to Reports...");
+        switchScene(event, "/cse213/fooddeliveryproject/Report.fxml");
     }
 
     @FXML
-    void handleBackups(ActionEvent event) {
+    private void handleBackups(ActionEvent event) {
         System.out.println("Navigating to Backups...");
+        switchScene(event, "/cse213/fooddeliveryproject/Backup.fxml");
     }
 
     @FXML
-    void handleSystemHealth(ActionEvent event) {
+    private void handleSystemHealth(ActionEvent event) {
         System.out.println("Navigating to System Health...");
+        switchScene(event, "/cse213/fooddeliveryproject/Health.fxml");
     }
 
     @FXML
-    void handleTOS(ActionEvent event) {
+    private void handleTOS(ActionEvent event) {
         System.out.println("Navigating to Terms of Service...");
+        switchScene(event, "/cse213/fooddeliveryproject/Terms.fxml");
+    }
+
+    private void switchScene(ActionEvent event, String fxmlFile) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Error while switching scenes: " + e.getMessage());
+        }
     }
 }

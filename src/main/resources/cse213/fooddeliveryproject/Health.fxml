@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600" prefWidth="800" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="cse213.fooddeliveryproject.Sadnan_2321524.HealthController">
+    <children>
+        <Label layoutX="101.0" layoutY="17.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="System Health Monitor" />
+        <Button fx:id="backButton" layoutX="30" layoutY="20" onAction="#handleBackAction" text="Back" />
+        <ProgressBar fx:id="cpuProgress" layoutX="20" layoutY="60" prefWidth="300" />
+        <Label layoutX="330" layoutY="60" text="CPU Usage" />
+
+        <ProgressBar fx:id="memoryProgress" layoutX="20" layoutY="100" prefWidth="300" />
+        <Label layoutX="330" layoutY="100" text="Memory Load" />
+
+        <ProgressBar fx:id="apiErrorProgress" layoutX="20" layoutY="140" prefWidth="300" />
+        <Label layoutX="330" layoutY="140" text="API Error Rate" />
+
+        <Button fx:id="refreshBtn" layoutX="20" layoutY="190" onAction="#handleRefresh" text="Refresh Metrics" />
+
+        <ListView fx:id="alertList" layoutX="20" layoutY="240" prefHeight="280" prefWidth="760" />
+    </children>
+</AnchorPane>
