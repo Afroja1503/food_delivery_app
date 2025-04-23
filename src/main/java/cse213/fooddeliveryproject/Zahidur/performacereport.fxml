@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="514.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.fooddeliveryproject.Zahidur.Performacereport">
+   <children>
+      <TextField fx:id="reportIdField" layoutX="108.0" layoutY="25.0" />
+      <Label layoutX="27.0" layoutY="29.0" text="report id" />
+      <Label layoutX="381.0" layoutY="29.0" text="staff id" />
+      <TextField fx:id="staffIdField" layoutX="441.0" layoutY="25.0" />
+      <TextField fx:id="staffNameField" layoutX="97.0" layoutY="72.0" />
+      <Label layoutX="13.0" layoutY="76.0" text="staff name" />
+      <RadioButton fx:id="excellentField" layoutX="446.0" layoutY="76.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="68.0" text="excellent" />
+      <RadioButton fx:id="worstField" layoutX="526.0" layoutY="76.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="68.0" text="worst" />
+      <Label layoutX="319.0" layoutY="76.0" text="performance comment" />
+      <TextField fx:id="ratingField" layoutX="97.0" layoutY="113.0" />
+      <Label layoutX="13.0" layoutY="117.0" text="rating" />
+      <Label layoutX="327.0" layoutY="117.0" text="report date" />
+      <DatePicker fx:id="reportDateField" layoutX="393.0" layoutY="113.0" />
+      <Button layoutX="41.0" layoutY="167.0" mnemonicParsing="false" onAction="#addPerformanceData" text="addPerformanceData" />
+      <TableView layoutX="20.0" layoutY="220.0" onSort="#performanceTableField" prefHeight="189.0" prefWidth="612.0">
+        <columns>
+          <TableColumn fx:id="reportIdColumnField" prefWidth="75.0" text="report id" />
+          <TableColumn fx:id="staffIdColumnField" prefWidth="75.0" text="staff id" />
+            <TableColumn fx:id="staffNameColumnField" prefWidth="75.0" text="staff name" />
+            <TableColumn fx:id="performanceColumnField" prefWidth="93.0" text="performance" />
+            <TableColumn fx:id="ratingColumnField" prefWidth="75.0" text="rating" />
+            <TableColumn fx:id="reportColumnField" prefWidth="75.0" text="report date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
