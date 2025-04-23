@@ -10,13 +10,13 @@ import javafx.scene.control.TextField;
 public class PayrollController {
 
     @FXML
-    private TableColumn<?, ?> basicSalaryColumnField;
+    private TableColumn<Payroll,String> basicSalaryColumnField;
 
     @FXML
     private TextField basicSalaryField;
 
     @FXML
-    private TableColumn<?, ?> bonusColumnField;
+    private TableColumn<Payroll,String> bonusColumnField;
 
     @FXML
     private TextField bonusField;
@@ -25,31 +25,31 @@ public class PayrollController {
     private TextField employIdField;
 
     @FXML
-    private TableColumn<?, ?> employeeIdColumnField;
+    private TableColumn<Payroll,String> employeeIdColumnField;
 
     @FXML
-    private TableColumn<?, ?> netSalaryColumnField;
+    private TableColumn<Payroll,String> netSalaryColumnField;
 
     @FXML
     private TextField netSalaryField;
 
     @FXML
-    private TableColumn<?, ?> paymentDateColumnField;
+    private TableColumn<Payroll,String> paymentDateColumnField;
 
     @FXML
     private DatePicker paymentDateField;
 
     @FXML
-    private TableView<?> paymentTableColumn;
+    private TableView<String> paymentTableColumn;
 
     @FXML
-    private TableColumn<?, ?> payrollIdColumnField;
+    private TableColumn<Payroll,String> payrollIdColumnField;
 
     @FXML
     private TextField payrollIdField;
 
     @FXML
-    private TableColumn<?, ?> taxColumnField;
+    private TableColumn<Payroll,String> taxColumnField;
 
     @FXML
     private TextField taxField;

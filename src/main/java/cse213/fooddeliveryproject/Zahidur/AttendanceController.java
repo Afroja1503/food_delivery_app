@@ -14,16 +14,16 @@ public class AttendanceController {
     private RadioButton absentField;
 
     @FXML
-    private TableColumn<?, ?> attendanceColumnColumnField;
+    private TableColumn<Attendance,String> attendanceColumnColumnField;
 
     @FXML
-    private TableColumn<?, ?> attendanceIdColumnField;
+    private TableColumn<Attendance,String> attendanceIdColumnField;
 
     @FXML
     private TextField attendanceIdField;
 
     @FXML
-    private TableView<?> attendanceTableField;
+    private TableView<String> attendanceTableField;
 
     @FXML
     private DatePicker attendancedateField;
@@ -32,16 +32,16 @@ public class AttendanceController {
     private TextField checkInTimeField;
 
     @FXML
-    private TableColumn<?, ?> checkOutColumnField;
+    private TableColumn<Attendance,String> checkOutColumnField;
 
     @FXML
     private TextField checkOutTimeField;
 
     @FXML
-    private TableColumn<?, ?> checkinTimeColumnField;
+    private TableColumn<Attendance,String> checkinTimeColumnField;
 
     @FXML
-    private TableColumn<?, ?> employeeIdColumnField;
+    private TableColumn<Attendance,String> employeeIdColumnField;
 
     @FXML
     private TextField employeeIdField;
@@ -50,7 +50,7 @@ public class AttendanceController {
     private RadioButton presentField;
 
     @FXML
-    private TableColumn<?, ?> statusColumnField;
+    private TableColumn<Attendance,String> statusColumnField;
 
     @FXML
     void addAttendanceData(ActionEvent event) {

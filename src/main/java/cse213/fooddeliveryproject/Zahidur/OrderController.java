@@ -10,37 +10,37 @@ import javafx.scene.control.TextField;
 public class OrderController {
 
     @FXML
-    private TableColumn<?, ?> customerIdField;
+    private TableColumn<Order, String> customerIdField;
 
     @FXML
-    private TableColumn<?, ?> orderIdColumnField;
+    private TableColumn<Order, String> orderIdColumnField;
 
     @FXML
     private TextField orderIdField;
 
     @FXML
-    private TableView<?> orderTableField;
+    private TableView<String> orderTableField;
 
     @FXML
-    private TableColumn<?, ?> orderTimeColumnField;
+    private TableColumn<Order, String> orderTimeColumnField;
 
     @FXML
     private TextField orderTimeField;
 
     @FXML
-    private TableColumn<?, ?> priceColumnField;
+    private TableColumn<Order, String> priceColumnField;
 
     @FXML
     private TextField priceField;
 
     @FXML
-    private TableColumn<?, ?> restaurantIdField;
+    private TableColumn<Order, String> restaurantIdField;
 
     @FXML
-    private TableColumn<?, ?> statusColumnField;
+    private TableColumn<Order, String> statusColumnField;
 
     @FXML
-    private ComboBox<?> statusComboBox;
+    private ComboBox<String> statusComboBox;
 
     @FXML
     void addOrderButton(ActionEvent event) {

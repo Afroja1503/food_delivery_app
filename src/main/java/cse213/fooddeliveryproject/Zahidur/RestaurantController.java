@@ -9,7 +9,7 @@ import javafx.scene.control.TextField;
 public class RestaurantController {
 
     @FXML
-    private TableColumn<?, ?> addressColumnField;
+    private TableColumn<Restaurant, String> addressColumnField;
 
     @FXML
     private TextField addressField;
@@ -18,10 +18,10 @@ public class RestaurantController {
     private TextField emailField;
 
     @FXML
-    private TableColumn<?, ?> emailPhoneField;
+    private TableColumn<Restaurant, String> emailPhoneField;
 
     @FXML
-    private TableColumn<?, ?> menuColumnField;
+    private TableColumn<Restaurant, String> menuColumnField;
 
     @FXML
     private TextField menuField;
@@ -30,22 +30,22 @@ public class RestaurantController {
     private TextField nameField;
 
     @FXML
-    private TableColumn<?, ?> phoneColumnField;
+    private TableColumn<Restaurant, String> phoneColumnField;
 
     @FXML
     private TextField phoneField;
 
     @FXML
-    private TableColumn<?, ?> resaturantColumnField;
+    private TableColumn<Restaurant, String> resaturantColumnField;
 
     @FXML
-    private TableColumn<?, ?> restaurantColumnField;
+    private TableColumn<Restaurant, String> restaurantColumnField;
 
     @FXML
     private TextField restaurantIdField;
 
     @FXML
-    private TableView<?> restaurantTableField;
+    private TableView<String> restaurantTableField;
 
     @FXML
     void addRestaurantButton(ActionEvent event) {

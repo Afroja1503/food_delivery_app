@@ -10,58 +10,58 @@ import javafx.scene.control.TextField;
 public class EmployeeController {
 
     @FXML
-    private TableColumn<?, ?> emailColumnField;
+    private TableColumn<Employee,String> emailColumnField;
 
     @FXML
     private TextField emailField;
 
     @FXML
-    private TableColumn<?, ?> employeeIdColumnField;
+    private TableColumn<Employee,String> employeeIdColumnField;
 
     @FXML
     private TextField employeeIdField;
 
     @FXML
-    private TableView<?> employeeTableField;
+    private TableView<String> employeeTableField;
 
     @FXML
-    private TableColumn<?, ?> hireColumnField;
+    private TableColumn<Employee,String> hireColumnField;
 
     @FXML
     private DatePicker hireDateField;
 
     @FXML
-    private TableColumn<?, ?> nameColumnField;
+    private TableColumn<Employee,String> nameColumnField;
 
     @FXML
     private TextField nameField;
 
     @FXML
-    private TableColumn<?, ?> payrollColumnField;
+    private TableColumn<Employee,String> payrollColumnField;
 
     @FXML
     private TextField payrollField;
 
     @FXML
-    private TableColumn<?, ?> phoneColumnField;
+    private TableColumn<Employee,String> phoneColumnField;
 
     @FXML
     private TextField phoneField;
 
     @FXML
-    private TableColumn<?, ?> positionColumnField;
+    private TableColumn<Employee,String> positionColumnField;
 
     @FXML
     private TextField positionField;
 
     @FXML
-    private TableColumn<?, ?> ratingColumnField;
+    private TableColumn<Employee,String> ratingColumnField;
 
     @FXML
     private TextField ratingField;
 
     @FXML
-    private TableColumn<?, ?> salaryColumnField;
+    private TableColumn<Employee,String> salaryColumnField;
 
     @FXML
     private TextField salaryField;

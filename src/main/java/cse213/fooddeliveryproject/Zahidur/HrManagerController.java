@@ -11,46 +11,46 @@ import javafx.scene.control.TextField;
 public class HrManagerController {
 
     @FXML
-    private TableColumn<?, ?> emailColumnField;
+    private TableColumn<HrManager, String> emailColumnField;
 
     @FXML
     private TextField emailField;
 
     @FXML
-    private TableColumn<?, ?> hrIdColumnField;
+    private TableColumn<HrManager, String> hrIdColumnField;
 
     @FXML
     private TextField hrIdField;
 
     @FXML
-    private TableView<?> hrTableField;
+    private TableView<String> hrTableField;
 
     @FXML
     private DatePicker joinDateField;
 
     @FXML
-    private TableColumn<?, ?> joindateColumnField;
+    private TableColumn<HrManager, String> joindateColumnField;
 
     @FXML
-    private TableColumn<?, ?> nameColumnField;
+    private TableColumn<HrManager, String> nameColumnField;
 
     @FXML
     private TextField nameField;
 
     @FXML
-    private TableColumn<?, ?> phoneColumnField;
+    private TableColumn<HrManager, String> phoneColumnField;
 
     @FXML
     private TextField phoneField;
 
     @FXML
-    private TableColumn<?, ?> positionColumnField;
+    private TableColumn<HrManager, String> positionColumnField;
 
     @FXML
     private TextField positionField;
 
     @FXML
-    private TableColumn<?, ?> salaryColumnField;
+    private TableColumn<HrManager, String> salaryColumnField;
 
     @FXML
     private TextField salaryField;

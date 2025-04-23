@@ -10,61 +10,61 @@ import javafx.scene.control.TextField;
 public class DeliveryReportController {
 
     @FXML
-    private TableColumn<?, ?> deliverPersonIdColumnFiled;
+    private TableColumn<DeliveryReport,String > deliverPersonIdColumnFiled;
 
     @FXML
     private TextField deliveryPersonField;
 
     @FXML
-    private TableView<?> deliveryReportTableColumn;
+    private TableView<String> deliveryReportTableColumn;
 
     @FXML
     private TextField deliveryTimeField;
 
     @FXML
-    private TableColumn<?, ?> distanceColumnField;
+    private TableColumn<DeliveryReport,String> distanceColumnField;
 
     @FXML
     private TextField distanceField;
 
     @FXML
-    private TableColumn<?, ?> durationColumnField;
+    private TableColumn<DeliveryReport,String> durationColumnField;
 
     @FXML
     private TextField durationField;
 
     @FXML
-    private TableColumn<?, ?> feedbackColumnField;
+    private TableColumn<DeliveryReport,String> feedbackColumnField;
 
     @FXML
     private TextField feedbackField;
 
     @FXML
-    private TableColumn<?, ?> orderIdColumnField;
+    private TableColumn<DeliveryReport,String> orderIdColumnField;
 
     @FXML
     private TextField orderIdField;
 
     @FXML
-    private TableColumn<?, ?> ratingColumnField;
+    private TableColumn<DeliveryReport,String> ratingColumnField;
 
     @FXML
     private TextField ratingField;
 
     @FXML
-    private TableColumn<?, ?> reportIdColumnField;
+    private TableColumn<DeliveryReport,String> reportIdColumnField;
 
     @FXML
     private TextField reportIdField;
 
     @FXML
-    private TableColumn<?, ?> statusColumnField;
+    private TableColumn<DeliveryReport,String> statusColumnField;
 
     @FXML
-    private ComboBox<?> statusComboBox;
+    private ComboBox<String> statusComboBox;
 
     @FXML
-    private TableColumn<?, ?> timeColumnField;
+    private TableColumn<DeliveryReport,String> timeColumnField;
 
     @FXML
     void addDeliverReportButton(ActionEvent event) {

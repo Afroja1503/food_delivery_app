@@ -14,42 +14,42 @@ public class InventoryController {
     private Button addInventoryButton;
 
     @FXML
-    private TableColumn<?, ?> customerNameColumnField;
+    private TableColumn<Inventory, String> customerNameColumnField;
 
     @FXML
     private TextField customerNameField;
 
     @FXML
-    private TableColumn<?, ?> expireDateColumnField;
+    private TableColumn<Inventory, String> expireDateColumnField;
 
     @FXML
     private DatePicker expireDateField;
 
     @FXML
-    private TableView<?> inventoryTableField;
+    private TableView<String> inventoryTableField;
 
     @FXML
-    private TableColumn<?, ?> itemIdColumnField;
+    private TableColumn<Inventory, String> itemIdColumnField;
 
     @FXML
     private TextField itemIdField;
 
     @FXML
-    private TableColumn<?, ?> itemNameColumnField;
+    private TableColumn<Inventory, String> itemNameColumnField;
 
     @FXML
     private TextField itemNameField;
 
     @FXML
-    private TableColumn<?, ?> quantityColumnField;
+    private TableColumn<Inventory, String> quantityColumnField;
 
     @FXML
     private TextField quantityField;
 
     @FXML
-    private TableColumn<?, ?> statusColumnField;
+    private TableColumn<Inventory, String> statusColumnField;
 
     @FXML
-    private ComboBox<?> statusComboBox;
+    private ComboBox<String> statusComboBox;
 
 }
