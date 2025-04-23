@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="535.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.fooddeliveryproject.Zahidur.Payroll">
+<AnchorPane prefHeight="535.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.fooddeliveryproject.Zahidur.PayrollController">
    <children>
       <TextField fx:id="payrollIdField" layoutX="100.0" layoutY="27.0" />
       <Label layoutX="23.0" layoutY="31.0" text="payroll id" />
