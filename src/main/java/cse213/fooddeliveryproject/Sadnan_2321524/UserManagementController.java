@@ -43,7 +43,6 @@ public class UserManagementController {
 
         roleComboBox.setItems(FXCollections.observableArrayList("Customer", "Seller", "Admin"));
 
-        // Populate the initial user list
         userList.addAll(
                 new User(1, "Alice Johnson", "alice@example.com", "Customer"),
                 new User(2, "Bob Smith", "bob@example.com", "Seller"),
@@ -79,10 +78,10 @@ public class UserManagementController {
     void handleDeleteUser(ActionEvent event) {
         User selected = userTable.getSelectionModel().getSelectedItem();
         if (selected != null) {
-            userList.remove(selected);              // Remove from active list
-            archivedUsers.add(selected);            // Add to archive
-            userTable.setItems(userList);           // Refresh TableView
-            saveArchivedUsersToBinFile();           // Save archive
+            userList.remove(selected);
+            archivedUsers.add(selected);
+            userTable.setItems(userList);
+            saveArchivedUsersToBinFile();
             statusLabel.setText("User deleted and archived.");
         } else {
             statusLabel.setText("No user selected.");

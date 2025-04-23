@@ -35,7 +35,6 @@ public class LoginController {
         String password = passwordField.getText();
         String role = roleComboBox.getValue();
 
-        // For demonstration, using fixed credentials (replace with real auth in future)
         if (username.equals("admin") && password.equals("admin123") && role.equals("Admin")) {
             System.out.println("Admin login successful!");
             switchScene(event, "/cse213/fooddeliveryproject/AdminDashboard.fxml", "Admin Dashboard");

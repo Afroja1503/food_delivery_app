@@ -32,7 +32,6 @@ public class DeliveryAvailabilityController {
         isAvailable = !isAvailable;
         updateToggleLabel();
 
-        // Simulate saving status in DB
         System.out.println("Availability updated: " + (isAvailable ? "Available" : "Unavailable"));
 
         statusLabel.setText("Your availability is now set to: " + (isAvailable ? "Available" : "Unavailable"));

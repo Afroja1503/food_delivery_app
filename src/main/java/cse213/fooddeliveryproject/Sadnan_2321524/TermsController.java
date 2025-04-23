@@ -24,7 +24,6 @@ public class TermsController {
 
     @FXML
     public void initialize() {
-        // Load existing terms or template
         termsEditor.setText("Enter updated Terms of Service here...");
     }
 
@@ -43,7 +42,6 @@ public class TermsController {
         String newText = termsEditor.getText();
         String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
 
-        // Simulate save and notify
         System.out.println("Terms updated: " + timestamp);
         statusLabel.setText("Terms of Service published at " + timestamp);
 

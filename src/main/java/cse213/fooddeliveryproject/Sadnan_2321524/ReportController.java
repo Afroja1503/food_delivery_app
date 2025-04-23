@@ -39,7 +39,6 @@ public class ReportController {
             return;
         }
 
-        // Simulate report generation
         StringBuilder report = new StringBuilder();
         report.append("Report Type: ").append(type).append("\n");
         report.append("Date Range: ").append(start).append(" to ").append(end).append("\n\n");

@@ -35,7 +35,6 @@ public class SystemLogsController {
         typeColumn.setCellValueFactory(data -> data.getValue().typeProperty());
         messageColumn.setCellValueFactory(data -> data.getValue().messageProperty());
 
-        // Simulated logs
         logs.add(new LogEntry(now(), "INFO", "System started"));
         logs.add(new LogEntry(now(), "ERROR", "API failure on /orders"));
         logs.add(new LogEntry(now(), "WARN", "Disk usage at 90%"));

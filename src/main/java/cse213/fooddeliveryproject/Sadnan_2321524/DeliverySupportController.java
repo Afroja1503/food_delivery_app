@@ -42,10 +42,8 @@ public class DeliverySupportController {
 
         String ticketId = "TKT-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
 
-        // Create a SupportTicket object
         SupportTicket ticket = new SupportTicket(ticketId, orderId, issue);
 
-        // Save the ticket
         saveTicket(ticket);
 
         confirmationLabel.setText("Ticket created: " + ticketId);

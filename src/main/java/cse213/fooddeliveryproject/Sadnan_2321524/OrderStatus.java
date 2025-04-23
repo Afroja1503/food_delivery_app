@@ -14,7 +14,7 @@ public class OrderStatus {
         this.orderId = new SimpleStringProperty(orderId);
         this.customerName = new SimpleStringProperty(customerName);
         this.status = new SimpleStringProperty(status);
-        this.statusDropdown = new SimpleStringProperty(status); // Initialize with current status
+        this.statusDropdown = new SimpleStringProperty(status);
     }
 
     public String getOrderId() {

@@ -48,7 +48,6 @@ public class PermissionController {
     @FXML
     void handleSavePermissions() {
         for (UserPermission up : permissionList) {
-            // In a real app, persist each user's permissions to DB or config file
             System.out.println("Saving permissions for " + up.getUsername());
         }
         statusLabel.setText("Permissions updated.");
